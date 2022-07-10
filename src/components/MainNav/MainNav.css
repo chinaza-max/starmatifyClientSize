@@ -1,0 +1,201 @@
+.MainNav {
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+}
+
+@media (max-width: 480px) {
+  .MainNav {
+    height: 85px;
+  }
+}
+
+.MainNav #upNav {
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  grid-column-gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .MainNav #upNav {
+    max-width: 98%;
+  }
+}
+
+.MainNav #upNav > li {
+  margin-top: 4px;
+  height: 55px;
+}
+
+@media (max-width: 480px) {
+  .MainNav #upNav > li {
+    margin-top: 0px;
+  }
+}
+
+.MainNav #upNav > li .NavLinks {
+  list-style: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 500px;
+  line-height: 30px;
+  margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+  .MainNav #upNav > li .NavLinks {
+    max-width: 400px;
+  }
+}
+
+.MainNav #upNav > li .NavLinks > li {
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 33px;
+  line-height: 30px;
+}
+
+.MainNav #upNav > li .NavLinks > li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+  font-size: 17px;
+}
+
+@media (max-width: 780px) {
+  .MainNav #upNav > li .NavLinks > li a {
+    font-size: 15px;
+  }
+}
+
+.MainNav #upNav > li .NavLinks > li a span {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  border-radius: 30px 30px 0px 0px;
+  width: 0%;
+  background-color: gold;
+  -webkit-transition: width 300ms;
+  transition: width 300ms;
+}
+
+.MainNav #upNav > li .NavLinks > li a:hover .borderSelect {
+  width: 100%;
+}
+
+.MainNav #upNav > li .NavLinks > li a:hover {
+  color: gold;
+}
+
+.MainNav #upNav > li .NavLinks > li .active {
+  color: gold;
+}
+
+.MainNav #upNav > li .NavLinks > li .active span {
+  width: 100%;
+}
+
+.MainNav #upNav > li:first-child span {
+  width: 110px;
+  height: 80px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .MainNav #upNav > li:first-child span {
+    width: 60px;
+    height: 50px;
+    line-height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MainNav #upNav > li:first-child span {
+    border-radius: 50%;
+    width: 60px;
+    height: 30px;
+    line-height: 80px;
+  }
+}
+
+.MainNav #upNav > li:first-child span a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.MainNav #upNav > li:first-child span a img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .MainNav #upNav > li:first-child span a img {
+    border-radius: 10%;
+  }
+}
+
+.MainNav #upNav > li:last-child {
+  text-align: right;
+  width: 210px;
+}
+
+@media (max-width: 768px) {
+  .MainNav #upNav > li:last-child {
+    width: 187px;
+  }
+}
+
+.MainNav #upNav > li:last-child span {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .MainNav #upNav > li:last-child span {
+    margin-top: 16px;
+  }
+}
+
+.MainNav #upNav > li:last-child #second {
+  margin-left: 10px;
+}
+
+@media (max-width: 480px) {
+  .MainNav #upNav > li:last-child #second {
+    margin-right: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MainNav #upNav {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .MainNav #upNav #middle {
+    display: none;
+  }
+}
+/*# sourceMappingURL=MainNav.css.map */

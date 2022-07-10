@@ -1,0 +1,79 @@
+$fontFamilyH:'Sansita Swashed', cursive;
+$fontSizeH:30px;
+$fontSizeHT:22px;
+
+.Home{
+    margin-top: 0px ;
+    padding-top: 0px;
+    #section1{
+        width: 100%;
+        margin-top: 90px;
+        >ul{
+            border: 1px solid red;
+            width: 80%;
+            margin: 0 auto;
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-column-gap: 10px;
+            @media (max-width:1024px) {
+                width: 95%;
+            }
+            @media (max-width:480px) {
+                grid-template-columns:1fr ;
+            }
+            li{
+                #Heading{
+                    margin-top: 50px;
+                    border-left: 2px solid black;
+                    padding-left: 10px;
+                    font-family: $fontFamilyH;
+                    font-size: $fontSizeH;
+                    @media (max-width:768px) {
+                        font-size: $fontSizeHT;
+                    }
+                }
+                #paragraph{
+                    margin-top: 25px;
+                    padding-left: 10px;
+                }
+                #button{
+                    width: 230px;
+                    margin-top: 20px;                
+                    >ul{
+                        display: grid;
+                        grid-template-columns:1fr 1fr;
+                        grid-column-gap: 10px;
+                        padding: 0;
+                        list-style: none;
+                        >li{
+                            >span{
+                                #callButton{
+                                    h5{
+                                        position: relative;
+                                        .icons{
+                                            position: absolute;
+                                            top: 4px;
+                                            left: 10px;
+                                        }
+                                    }
+                                }
+                                #videoButton{
+                                     h5{
+                                        position: relative;
+                                        .icons{
+                                            position: absolute;
+                                            top: 4px;
+                                            left: -2px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

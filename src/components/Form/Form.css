@@ -8,11 +8,20 @@
 }
 
 .FormContainer form {
-  width: 300px;
-  height: 500px;
-  border: 1px solid red;
+  width: 380px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0 auto;
   margin-top: 30px;
+  background-color: #5f5c5c40;
+  padding-bottom: 1px;
+}
+
+@media (max-width: 768px) {
+  .FormContainer form {
+    width: 300px;
+  }
 }
 
 .FormContainer form #title {
@@ -21,6 +30,285 @@
   text-align: center;
   color: white;
   line-height: 35px;
-  background-color: #034e03;
+  font-size: 18px;
+  font-family: "Sansita Swashed", cursive;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-2.92%, #295E48), color-stop(122.79%, rgba(40, 89, 69, 0)));
+  background: linear-gradient(270deg, #295E48 -2.92%, rgba(40, 89, 69, 0) 122.79%);
+  -webkit-filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
+}
+
+.FormContainer form #content {
+  margin: 0 auto;
+  width: 96%;
+  position: relative;
+  padding-bottom: 25px;
+  overflow: hidden;
+}
+
+.FormContainer form #content .label {
+  margin-top: 10px;
+}
+
+.FormContainer form #content .select {
+  width: 100%;
+  display: block;
+  color: #302f2f;
+  opacity: 0.7;
+  border: none;
+  border-bottom: 1px solid #434343;
+  outline: 0px;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  padding-bottom: 4px;
+}
+
+.FormContainer form #content .select option:hover {
+  background-color: yellow;
+}
+
+.FormContainer form #content .select :focus {
+  outline: none;
+}
+
+.FormContainer form #content #selectSection1 {
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 15px;
+}
+
+.FormContainer form #content #selectSection1 li {
+  display: block;
+}
+
+.FormContainer form #content #selectSection1 li:nth-child(2) div {
+  margin: 0 auto;
+}
+
+.FormContainer form #content #selectSection1 li:nth-child(3) div {
+  float: right;
+}
+
+.FormContainer form #content #selectSection2 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 5px;
+}
+
+.FormContainer form #content #selectSection2 li:nth-child(2) div {
+  float: right;
+}
+
+.FormContainer form #content #selectSection3 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 5px;
+}
+
+.FormContainer form #content #selectSection3 li {
+  width: 100%;
+}
+
+.FormContainer form #content #selectSection4 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 0px;
+}
+
+.FormContainer form #content #selectSection4 li {
+  width: 100%;
+}
+
+.FormContainer form #content #selectSection5 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+
+.FormContainer form #content #selectSection5 li {
+  width: 100%;
+  position: relative;
+}
+
+.FormContainer form #content #selectSection5 li .icons {
+  position: absolute;
+  top: 29px;
+  right: 3px;
+  font-size: 15px;
+}
+
+.FormContainer form #content #selectSection5 li .schedule {
+  width: 100%;
+}
+
+.FormContainer form #content #selectSection5 li .label {
+  font-size: 12px;
+}
+
+.FormContainer form #content #selectSection6 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 0px;
+}
+
+.FormContainer form #content #selectSection6 li {
+  width: 100%;
+  position: relative;
+}
+
+.FormContainer form #content #selectSection6 li .icons {
+  position: absolute;
+  top: 29px;
+  right: 3px;
+  font-size: 15px;
+}
+
+.FormContainer form #content #selectSection6 li .schedule {
+  width: 100%;
+}
+
+.FormContainer form #content #selectSection6 li .label {
+  font-size: 12px;
+}
+
+.FormContainer form #content .selectSection {
+  width: 100%;
+  padding: 0px;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .FormContainer form #content .selectSection {
+    grid-column-gap: 10px;
+  }
+}
+
+.FormContainer form #content .selectSection li {
+  width: 100%;
+}
+
+.FormContainer form #content .selectSection li .active {
+  background-color: #285945;
+  color: white;
+}
+
+.FormContainer form #content .selectSection li .schedule {
+  background-color: white;
+  outline: 0px;
+  border: none;
+  position: relative;
+}
+
+.FormContainer form #content .selectSection li .schedule:focus {
+  outline: none;
+}
+
+.FormContainer form #content .selectSection li .schedule:hover {
+  cursor: pointer;
+}
+
+.FormContainer form #content textarea {
+  width: 100%;
+  outline: none;
+}
+
+.FormContainer form #content textarea:focus {
+  outline: none;
+}
+
+.FormContainer form #content #additionalService {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  list-style: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 15px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin-top: 15px;
+}
+
+.FormContainer form #content #additionalService .services {
+  background-color: #6fbb9b;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.FormContainer form #content #additionalService .services .DeleteIcon {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.FormContainer form #content #additionalService .services .DeleteIcon:hover {
+  cursor: pointer;
+}
+
+.FormContainer form #content #additionalService .services textarea {
+  width: 99.5%;
+}
+
+.FormContainer form #content .AddIcons {
+  position: absolute;
+  bottom: -2px;
+  right: 0px;
+  color: green;
+}
+
+.FormContainer form #content .AddIcons:hover {
+  cursor: pointer;
+}
+
+.FormContainer form #content .AddIcons .action {
+  font-size: 10px;
+  color: green;
+}
+
+.FormContainer form #userDetails {
+  margin: 0 auto;
+  width: 96%;
+}
+
+.FormContainer form #userDetails input[type=text] {
+  width: 100%;
+  margin-top: 3px;
+}
+
+.FormContainer form #userDetails input[type=text]:focus {
+  outline: none;
+}
+
+.FormContainer form button {
+  margin: 0 auto;
+  width: 60%;
+  height: 30px;
+  display: block;
+  background-color: #285945;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.FormContainer form button:focus {
+  outline: none;
+  border: none;
+}
+
+.FormContainer form button:hover {
+  background-color: white;
+  color: #285945;
+  border: 2px solid #285945;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Form.css.map */

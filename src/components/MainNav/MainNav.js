@@ -6,12 +6,17 @@ import {useTransition,animated}  from "react-spring"
 import Button from "../styledComponent/ButtonLogin.styled";
 import Nav2  from "../MainNav2/MainNav2"
 import {Link} from "react-router-dom";
+import {useSelector } from "react-redux";
+import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Money from "../MoneyNav/MoneyNav"
 //import {useSelector } from "react-redux"
 //import {DisplayJoinUsPage,DisplayLoginPage}  from "../../Redux/Action"
 
 export default function MainNav() {
   const [items,setItems]=useState([]);
   const [items2,setItems2]=useState(false);
+  const isLoggedIn=useSelector(state=> state.isLoggedIn)
   const darkTheme =useTheme()
   const transition=useTransition(items,{
     from:{x:100,y:-200,opacity:0},
@@ -42,17 +47,26 @@ export default function MainNav() {
 
   useEffect(()=>{
     setTimeout(()=>{
-            setItems([{x:0,data:"Home",data2:"SelectedLink  active",
-            data3:0,delay:110},{x:0,data:"Service",data2:"SelectedLink",
-            data3:1,delay:130},{x:0,data:"Gallery",data2:"SelectedLink",
-            data3:2,delay:150},{x:0,data:"Contact",data2:"SelectedLink",
-            data3:3,delay:170}])
 
-            setItems2(true)
-  
+      if(isLoggedIn){
+        setItems([{x:0,data:"Home",data2:"SelectedLink  active",
+        data3:0,delay:110},{x:0,data:"Gallery",data2:"SelectedLink",
+        data3:1,delay:130},{x:0,data:"Dashboard",data2:"SelectedLink",
+        data3:2,delay:150},{x:0,data:"Contact",data2:"SelectedLink",
+        data3:3,delay:170}])
+      }
+      else{
+        setItems([{x:0,data:"Home",data2:"SelectedLink  active",
+        data3:0,delay:110},{x:0,data:"Service",data2:"SelectedLink",
+        data3:1,delay:130},{x:0,data:"Gallery",data2:"SelectedLink",
+        data3:2,delay:150},{x:0,data:"Contact",data2:"SelectedLink",
+        data3:3,delay:170}])
+
+      }
+        setItems2(true)
   }
     ,1000)
-  },[])
+  },[isLoggedIn])
   
   return (
     <>
@@ -90,21 +104,36 @@ export default function MainNav() {
             </ul>
         </li>
         <li>
-          <span id="first">
-            <Button>
-              <h5>
-              login
-              </h5>
-            </Button>
-          </span>
 
-          <span id="second">
-            <Button buttonColorp="true">
-              <h5>
-              SignUp
-              </h5>
-            </Button>
-          </span>
+        
+          {isLoggedIn?
+          <>
+            <ul id="rightSide">
+              <li> <Money/></li>
+              <li> <span>fund wallet</span>  </li>
+              <li> <span className="AccountCircleIcon"><AccountCircleIcon/></span>  </li>
+            </ul>
+            <span className="MenuIcon"><MenuIcon/></span>
+          </>
+          :
+            <>
+              <span id="first">
+                <Button>
+                  <h5>
+                  login
+                  </h5>
+                </Button>
+             </span>
+
+              <span id="second">
+                <Button buttonColorp="true">
+                  <h5>
+                  SignUp
+                  </h5>
+                </Button>
+              </span>
+            </>
+          }
         </li>
       </ul>
       <Nav2/>

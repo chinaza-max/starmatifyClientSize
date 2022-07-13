@@ -1,0 +1,120 @@
+.MoneyNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 480px) {
+  .MoneyNav li {
+    line-height: 50px;
+  }
+}
+
+.MoneyNav > li:first-child {
+  padding-right: 5px;
+  line-height: 24px;
+}
+
+@media (max-width: 480px) {
+  .MoneyNav > li:first-child {
+    line-height: 27px;
+  }
+}
+
+.MoneyNav > li:first-child:hover {
+  cursor: pointer;
+}
+
+.MoneyNav > li:last-child:hover {
+  cursor: pointer;
+}
+
+.MoneyNav > li:last-child {
+  line-height: 27px;
+  padding-left: 6px;
+}
+
+@media (max-width: 480px) {
+  .MoneyNav > li:last-child {
+    line-height: 28px;
+  }
+}
+
+.MoneyNav > li:last-child .refresh {
+  display: inline-block;
+  -webkit-animation: load1 400ms ease-in;
+          animation: load1 400ms ease-in;
+}
+
+@-webkit-keyframes load1 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+  }
+}
+
+@keyframes load1 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .MoneyNav > li:nth-child(2) ul li {
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MoneyNav > li:nth-child(2) > ul > li:first-child {
+    font-size: 10px;
+    line-height: 23px;
+  }
+}
+
+.MoneyNav .MoneyNavInput {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  color: #FFFFFF;
+  padding-left: 3px;
+}
+
+@media (max-width: 480px) {
+  .MoneyNav .MoneyNavInput {
+    margin-right: -4px;
+  }
+}
+
+.MoneyNav .MoneyNavInput:focus {
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .MoneyNav .MoneyNavInput {
+    font-size: 10px;
+    padding-left: 3px;
+  }
+}
+/*# sourceMappingURL=MoneyNav.css.map */

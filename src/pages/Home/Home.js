@@ -62,27 +62,28 @@ export default function Home() {
                 </p>
             </div>
             <div id="button">
-
               <ul>
-
                 <li>
                   <span id="call">
                     <Button  id="callButton" ColorP="white" buttonColorP="rgba(40, 89, 69, 0.6);" borderColorP="black" >
                     
                     <h5>
                       <PhoneIcon className="icons"/>
-                      call us
+                      <span>
+                        call us
+                      </span>
                     </h5>
                     </Button>
                   </span>
                 </li>
                 <li>
                 <span id="video">
-                    <Button  id="videoButton" ColorP="black" buttonColorP="rgba(119, 148, 6, 0.6);" borderColorP="green" >
-                    
+                    <Button  id="videoButton" ColorP="black" buttonColorP="white" borderColorP="green">
                     <h5>
                       <PlayCircleOutlineIcon  className="icons"/>
+                      <span>
                       watch video
+                      </span>
                     </h5>
                     </Button>
                   </span>
@@ -93,7 +94,7 @@ export default function Home() {
             </div>
           </li>
           <li>
-              <Form/>
+              <Form typeP="instant" titleP="instant service request" buttonTypeP="Request a qoute"/>
           </li>
         </ul>
       </section>

@@ -1,7 +1,7 @@
 $fontFamilyH:'Sansita Swashed', cursive;
 $fontSizeH:30px;
-$fontSizeHT:22px;
-
+$fontSizeHT:20px;
+$fontSizePM:12px;
 .Home{
     margin-top: 0px ;
     padding-top: 0px;
@@ -23,6 +23,10 @@ $fontSizeHT:22px;
             @media (max-width:480px) {
                 grid-template-columns:1fr ;
             }
+            >li:nth-child(2){
+                min-width:320px;
+              
+            }
             li{
                 #Heading{
                     margin-top: 50px;
@@ -32,15 +36,26 @@ $fontSizeHT:22px;
                     font-size: $fontSizeH;
                     @media (max-width:768px) {
                         font-size: $fontSizeHT;
+                        margin-top: 25px;
                     }
                 }
                 #paragraph{
-                    margin-top: 25px;
+                    margin-top: 45px;
                     padding-left: 10px;
+                    @media (max-width:768px) {
+                        margin-top: 20px;
+                    }
+                    @media (max-width:768px) {
+                        font-size: $fontSizePM;
+                    }
                 }
                 #button{
                     width: 230px;
-                    margin-top: 20px;                
+                    margin-top: 45px;
+                    margin-left: 10px;    
+                    @media (max-width:768px) {
+                        margin-top: 20px;
+                    }            
                     >ul{
                         display: grid;
                         grid-template-columns:1fr 1fr;
@@ -55,7 +70,31 @@ $fontSizeHT:22px;
                                         .icons{
                                             position: absolute;
                                             top: 4px;
-                                            left: 10px;
+                                            left: 20px;
+                                            @media (max-width:768px) {
+                                                top: 4px;
+                                                left: 15px;
+                                                font-size: 18px;
+                                            }
+                                            @media (max-width:480px) {
+                                                top: 4px;
+                                                left: 10px;
+                                                font-size: 18px;
+                                            }
+                                        }
+                                        span{
+                                            position: absolute;
+                                            top: 2px;
+                                            right: 30px;
+                                            @media (max-width:768px) {
+                                                top: 0px;
+                                                right: 24px;
+                                            }
+                                            @media (max-width:480px) {
+                                                top: 2px;
+                                                left: 34px;
+                
+                                            }
                                         }
                                     }
                                 }
@@ -65,7 +104,29 @@ $fontSizeHT:22px;
                                         .icons{
                                             position: absolute;
                                             top: 4px;
-                                            left: -2px;
+                                            left: 4px;
+                                            @media (max-width:768px) {
+                                                top: 5px;
+                                                left: 4px;
+                                                font-size: 18px;
+                                            }
+                                            @media (max-width:480px) {
+                                                top: 4px;
+                                                left: 2px;
+                                            }
+                                        }
+                                        span{
+                                            position: absolute;
+                                            top: 2px;
+                                            right: 10px;
+                                            @media (max-width:768px) {
+                                                top: -2px;
+                                                right: 5px;
+                                            }
+                                            @media (max-width:480px) {
+                                                top: 1px;
+                                                right:3px;
+                                            }
                                         }
                                     }
                                 }

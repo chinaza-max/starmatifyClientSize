@@ -34,6 +34,10 @@
   }
 }
 
+.Home #section1 > ul > li:nth-child(2) {
+  min-width: 320px;
+}
+
 .Home #section1 > ul li #Heading {
   margin-top: 50px;
   border-left: 2px solid black;
@@ -44,18 +48,38 @@
 
 @media (max-width: 768px) {
   .Home #section1 > ul li #Heading {
-    font-size: 22px;
+    font-size: 20px;
+    margin-top: 25px;
   }
 }
 
 .Home #section1 > ul li #paragraph {
-  margin-top: 25px;
+  margin-top: 45px;
   padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .Home #section1 > ul li #paragraph {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Home #section1 > ul li #paragraph {
+    font-size: 12px;
+  }
 }
 
 .Home #section1 > ul li #button {
   width: 230px;
-  margin-top: 20px;
+  margin-top: 45px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .Home #section1 > ul li #button {
+    margin-top: 20px;
+  }
 }
 
 .Home #section1 > ul li #button > ul {
@@ -75,7 +99,43 @@
 .Home #section1 > ul li #button > ul > li > span #callButton h5 .icons {
   position: absolute;
   top: 4px;
-  left: 10px;
+  left: 20px;
+}
+
+@media (max-width: 768px) {
+  .Home #section1 > ul li #button > ul > li > span #callButton h5 .icons {
+    top: 4px;
+    left: 15px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home #section1 > ul li #button > ul > li > span #callButton h5 .icons {
+    top: 4px;
+    left: 10px;
+    font-size: 18px;
+  }
+}
+
+.Home #section1 > ul li #button > ul > li > span #callButton h5 span {
+  position: absolute;
+  top: 2px;
+  right: 30px;
+}
+
+@media (max-width: 768px) {
+  .Home #section1 > ul li #button > ul > li > span #callButton h5 span {
+    top: 0px;
+    right: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home #section1 > ul li #button > ul > li > span #callButton h5 span {
+    top: 2px;
+    left: 34px;
+  }
 }
 
 .Home #section1 > ul li #button > ul > li > span #videoButton h5 {
@@ -85,6 +145,41 @@
 .Home #section1 > ul li #button > ul > li > span #videoButton h5 .icons {
   position: absolute;
   top: 4px;
-  left: -2px;
+  left: 4px;
+}
+
+@media (max-width: 768px) {
+  .Home #section1 > ul li #button > ul > li > span #videoButton h5 .icons {
+    top: 5px;
+    left: 4px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home #section1 > ul li #button > ul > li > span #videoButton h5 .icons {
+    top: 4px;
+    left: 2px;
+  }
+}
+
+.Home #section1 > ul li #button > ul > li > span #videoButton h5 span {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .Home #section1 > ul li #button > ul > li > span #videoButton h5 span {
+    top: -2px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home #section1 > ul li #button > ul > li > span #videoButton h5 span {
+    top: 1px;
+    right: 3px;
+  }
 }
 /*# sourceMappingURL=Home.css.map */

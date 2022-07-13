@@ -7,6 +7,7 @@ $fontsizetablet:15px;
     width: 100%;
     position: fixed;
     top: 0px;
+    z-index: 2;
     @media (max-width:480px) {
         height: 85px;
     }
@@ -122,7 +123,7 @@ $fontsizetablet:15px;
               //  border: 1px solid red;
                 width: 187px;
             }
-            span{
+            >span{
                 margin-top: 20px;
                 display: inline-block;
                 @media (max-width:480px) {
@@ -135,7 +136,52 @@ $fontsizetablet:15px;
                     margin-right: 3px;
                 }
             }
-           
+            #rightSide{
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns:2fr 2fr 1fr;
+                grid-column-gap: 8px;
+                margin-top: 25px;
+                @media (max-width:480px) {
+                    display: none;
+                }   
+                >li:nth-child(2){
+                    font-size: 12px;
+                    white-space: nowrap;
+                    margin-top: 5px;
+                    >span{
+                        border: 3px solid white;
+                        padding: 3px;
+                        line-height: 10px;
+                        &:hover{
+                            cursor: pointer;
+                            border: 3px solid $hoverColor;
+                            color: $hoverColor;
+                        }
+                    }
+                }
+                >li:nth-child(3){
+                    .AccountCircleIcon{
+                        &:hover{
+                            cursor: pointer;
+                            color: $hoverColor;
+                        }
+                    }
+                }
+            }
+            .MenuIcon{
+                display: none;
+                @media (max-width:480px) {
+                    display: block;
+                    width: fit-content;
+                    float: right;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }   
+            }
+              
         }
         @media (max-width:480px) {
             grid-template-columns:1fr 1fr;

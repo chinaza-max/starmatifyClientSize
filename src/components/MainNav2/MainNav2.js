@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {useTransition,animated}  from "react-spring"
 import {useEffect,useState} from "react";
+import {useSelector } from "react-redux";
 import "./MainNav2.css";
 
 
@@ -8,6 +9,7 @@ import "./MainNav2.css";
 
 export default function MainNav2() {
     const [items,setItems]=useState([]);
+    const isLoggedIn=useSelector(state=> state.isLoggedIn)
     const transition=useTransition(items,{
         from:{x:100,y:50,opacity:0},
         enter:item=>(next)=>(
@@ -28,15 +30,26 @@ export default function MainNav2() {
     
   useEffect(()=>{
     setTimeout(()=>{
-            setItems([{x:0,data:"Home",data2:"SelectedLink  active",
-            data3:0,delay:100},{x:0,data:"Service",data2:"SelectedLink",
-            data3:1,delay:200},{x:0,data:"Gallery",data2:"SelectedLink",
-            data3:2,delay:300},{x:0,data:"Contact",data2:"SelectedLink",
-            data3:3,delay:400}])
+
+            if(isLoggedIn){
+              setItems([{x:0,data:"Home",data2:"SelectedLink  active",
+              data3:0,delay:100},{x:0,data:"Gallery",data2:"SelectedLink",
+              data3:1,delay:200},{x:0,data:"Dashboard",data2:"SelectedLink",
+              data3:2,delay:300},{x:0,data:"Contact",data2:"SelectedLink",
+              data3:3,delay:400}])
+            }
+            else{
+              setItems([{x:0,data:"Homek",data2:"SelectedLink  active",
+              data3:0,delay:100},{x:0,data:"Service",data2:"SelectedLink",
+              data3:1,delay:200},{x:0,data:"Gallery",data2:"SelectedLink",
+              data3:2,delay:300},{x:0,data:"Contact",data2:"SelectedLink",
+              data3:3,delay:400}])
+            }
+           
   
   }
     ,1000)
-  },[])
+  },[isLoggedIn])
 
   return (
     <ul className="NavLinkmobile">

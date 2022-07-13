@@ -22,7 +22,7 @@ const Button=styled.div`
         cursor:pointer
     }
     @media (max-width:768px) {
-        width:80px;
+        width:100px;
         height:28px;
         border-radius:0px;
         h5{
@@ -31,8 +31,8 @@ const Button=styled.div`
         }
     }
     @media (max-width:480px) {
-        width:70px;
-        height:22px;
+        width:92px;
+        height:26px;
         border-radius:0px;
         h5{
             line-height:20px;

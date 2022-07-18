@@ -45,7 +45,6 @@ $sizeNavTextMobile:10px;
             display: inline-block;
             animation: load1 400ms ease-in;
         }
-
         @keyframes load1 {
             from {
                 transform: rotate(0deg);
@@ -58,6 +57,10 @@ $sizeNavTextMobile:10px;
     }
 
     >li:nth-child(2) ul li {
+        &:nth-child(1){
+            font-size: 13px;
+            line-height: 22px;
+        }
         @media (max-width:480px) {
           line-height: 22px;
         }
@@ -65,10 +68,9 @@ $sizeNavTextMobile:10px;
 
     >li:nth-child(2) {
         >ul>li:first-child {
-
             @media (max-width:480px) {
                 font-size: 10px;
-                line-height: 23px;
+                line-height: 27px;
             }
         }
     }

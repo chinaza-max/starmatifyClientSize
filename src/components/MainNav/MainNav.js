@@ -7,7 +7,6 @@ import Button from "../styledComponent/ButtonLogin.styled";
 import Nav2  from "../MainNav2/MainNav2"
 import {Link} from "react-router-dom";
 import {useSelector } from "react-redux";
-import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Money from "../MoneyNav/MoneyNav"
 //import {useSelector } from "react-redux"
@@ -33,8 +32,8 @@ export default function MainNav() {
   })
 
   const NavBarThem={
-    backgroundColor:darkTheme?'red':"#285945",
-    color:darkTheme?'black':"white",
+    backgroundColor:darkTheme?'black':"#285945",
+    color:darkTheme?'white':"white",
   }
   function select(val){
 
@@ -86,19 +85,17 @@ export default function MainNav() {
                  :""
               )} 
         </li>
-      
         <li id="middle">
             <ul className="NavLinks">
-              
               {
                 transition((style,item)=>
                  item?
                  <animated.li style={style}>
-                 <Link to={"#"} className={item.data2} onClick={()=>select(item.data3)}>
-                      {item.data}
-                     <span className="borderSelect"></span>
-                 </Link>
-               </animated.li>
+                    <Link to={"#"} className={item.data2} onClick={()=>select(item.data3)}>
+                          {item.data}
+                        <span className="borderSelect"></span>
+                    </Link>
+                  </animated.li>
                  :""
               )}  
             </ul>
@@ -113,7 +110,6 @@ export default function MainNav() {
               <li> <span>fund wallet</span>  </li>
               <li> <span className="AccountCircleIcon"><AccountCircleIcon/></span>  </li>
             </ul>
-            <span className="MenuIcon"><MenuIcon/></span>
           </>
           :
             <>

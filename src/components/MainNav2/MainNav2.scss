@@ -18,7 +18,7 @@ $fontsizetablet:15px;
        text-align: center;
        width: fit-content;
        height: 25px;
-      a{
+      >a{
         text-decoration: none;
         display: inline-block;
         width: 100%;
@@ -29,7 +29,7 @@ $fontsizetablet:15px;
         @media (max-width:780px) {
            font-size:$fontsizetablet;
         }
-        span{
+        >span{
             position: absolute;
             bottom: 0px;
             left: 0;
@@ -46,11 +46,14 @@ $fontsizetablet:15px;
             color: $hoverColor;
         }
       }
-      .active{
+    }
+    .active2{
+
+        >a{
             color: $hoverColor;
-        span{
-            width: 100%;
+            >span{
+                width: 100%;
+            }
         }
-      }
     }
 }

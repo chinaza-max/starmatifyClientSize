@@ -9,6 +9,7 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import { animated, useSpring } from "react-spring";
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import {useTheme}  from "../../themeContext";
 import {useSelector } from "react-redux";
 import {DisplayJoinUsPage,DisplayLoginPage}  from "../../Redux/Action"
 //import useAxiosPost from '../../Hooks/useAxiosPost';
@@ -17,7 +18,7 @@ import {DisplayJoinUsPage,DisplayLoginPage}  from "../../Redux/Action"
 
 
 export default   function Form(props) {
-
+  
   const[services,setService]=useState([]);
   const [startDate, setStartDate] = useState(new Date());
   const [startTime, setStartTime] = useState(new Date());
@@ -28,13 +29,26 @@ export default   function Form(props) {
   const serviceId = useRef(0);
   const [myService, setMyservice] = useState([]);
   const setUpadtemyService=useRef([])
-  const [styles1, api1] = useSpring(() => ({ height: "290px" }));
+  const [styles1, api1] = useSpring(() => ({ height: "310px" }));
   const isLoggedIn=useSelector(state=> state.isLoggedIn)
+  const darkTheme =useTheme()
+  const[title,setTitle]=useState(props.title);
+  const[file,setFile]=useState();
+  const[apidatas, setApidatas]=useState('');
+  const[buildinglocationType ,setBuildinglocationType]=useState("Home")
+  const[buildingType ,setBuildingType]=useState("Flat")
 
-    const[title,setTitle]=useState(props.title);
-    const[file,setFile]=useState();
-    const[apidatas, setApidatas]=useState('');
-
+  const titleTheme={
+    background:darkTheme?'black':"linear-gradient(270deg, #295E48 -2.92%, rgba(40, 89, 69, 0) 122.79%)",
+    color:darkTheme?'white':"white",
+  }
+  const selectButtonTheme={
+    background:darkTheme?'black':"#285945",
+    color:darkTheme?'white':"white",
+  }
+  const AddTheme={
+    color:darkTheme?'white':"white",
+  }
 
   //const extendForm
     //const {datas}=useAxiosPost(apidatas)
@@ -64,13 +78,13 @@ export default   function Form(props) {
       }))
 
       if(count.current===1){
-        api1.start({ height:"290px" })
+        api1.start({ height:"310px" })
       }
       if(count.current===2){
-        api1.start({ height:"290px" })
+        api1.start({ height:"310px" })
       }
       else if(count.current===3){
-        api1.start({ height:"600px" })
+        api1.start({ height:"620px" })
       }
       setAdditionalServiceCount(count.current-1)
     }
@@ -79,10 +93,10 @@ export default   function Form(props) {
     const addService=()=>{
       let arr=[]
       if(additionalServiceCount===1){
-        api1.start({ height:"600px" })
+        api1.start({ height:"620px" })
       }
       else if(additionalServiceCount===2){
-        api1.start({ height:"880px" })
+        api1.start({ height:"910px" })
       }
 
       const serviceKey=serviceId.current;
@@ -127,7 +141,12 @@ export default   function Form(props) {
     }
     const handleBuildingLocation=(val)=>{
       setBuildinglocation(val)
+      setBuildinglocationType(val)
     }
+    const handleBuildingType=(val)=>{
+      setBuildingType(val)
+    }
+
     const select=(index,select)=>{
       let elements=document.querySelectorAll(`.${select}`)
       elements.forEach((ele)=>{
@@ -185,7 +204,7 @@ export default   function Form(props) {
   return (
     <section className="FormContainer">
       <form onSubmit={(e)=>{onSubmit(e)}}>
-        <div id="title">{props.titleP}</div>
+        <div id="title" style={titleTheme} >{props.titleP}</div>
         <animated.div id="content" style={styles1}>
 
           <div className="label"> <label>Select service:</label></div>
@@ -195,13 +214,13 @@ export default   function Form(props) {
           
           <ul className="selectSection" id="selectSection1">
             <li>
-              <Button widthP="88" heightP="30" className="buttons1 active" onClick={()=>{select(0,"buttons1"); handleBuildingLocation("Home")}}>Home</Button>
+              <Button widthP="88" heightP="30"  style={buildinglocationType==="Home"?{...selectButtonTheme}:{}}   className="buttons1 active" onClick={()=>{select(0,"buttons1"); handleBuildingLocation("Home")}}>Home</Button>
             </li>
             <li>
-              <Button widthP="88" heightP="30"  className="buttons1" onClick={()=>{select(1,"buttons1");handleBuildingLocation("Office")}}>Office</Button>
+              <Button widthP="88" heightP="30"  style={buildinglocationType==="Office"?{...selectButtonTheme}:{}} className="buttons1" onClick={()=>{select(1,"buttons1");handleBuildingLocation("Office")}}>Office</Button>
             </li>
             <li>
-              <Button widthP="88" heightP="30"  className="buttons1" onClick={()=>{select(2,"buttons1");handleBuildingLocation("Others")}}>Others</Button>
+              <Button widthP="88" heightP="30" style={buildinglocationType==="Others"?{...selectButtonTheme}:{}}  className="buttons1" onClick={()=>{select(2,"buttons1");handleBuildingLocation("Others")}}>Others</Button>
             </li>
           </ul>
 
@@ -211,10 +230,10 @@ export default   function Form(props) {
               <div className="label"> <label>House type:</label></div>
               <ul className="selectSection"  id="selectSection2">
                 <li>
-                  <Button widthP="138" heightP="30" className="buttons2 active" onClick={()=>select(0,"buttons2") }>Flat </Button>
+                  <Button widthP="138" heightP="30" style={buildingType==="Flat"?{...selectButtonTheme}:{}} className="buttons2 active" onClick={()=>{select(0,"buttons2");handleBuildingType("Flat")}}>Flat </Button>
                 </li>
                 <li>
-                  <Button widthP="138" heightP="30"  className="buttons2" onClick={()=>select(1,"buttons2")}>Duplex</Button>
+                  <Button widthP="138" heightP="30" style={buildingType==="Duplex"?{...selectButtonTheme}:{}}  className="buttons2" onClick={()=>{select(1,"buttons2");handleBuildingType("Duplex")}}>Duplex</Button>
                 </li>
               </ul>
              </>
@@ -318,7 +337,7 @@ export default   function Form(props) {
           {additionalServiceCount===3?
            ''
           :
-          <span className="AddIcons" onClick={()=>addService()}>
+          <span className="AddIcons" style={AddTheme} onClick={()=>addService()}>
            <span className="action"> add another service</span><AddCircleOutlineIcon/>
           </span>
           }
@@ -326,17 +345,17 @@ export default   function Form(props) {
         </animated.div>
         {isLoggedIn===false?
           <div id="userDetails">
-          <div className="label"> <label>User Details:</label></div>
-          <input type="text" placeholder="Name"></input>
-          <input type="text" placeholder="Phone number"></input>
-          <input type="text" placeholder="Email"></input>
-          <input type="text" placeholder="Address"></input>
-        </div>
+            <div className="label"> <label>User Details:</label></div>
+            <input type="text" placeholder="Name"></input>
+            <input type="text" placeholder="Phone number"></input>
+            <input type="text" placeholder="Email"></input>
+            <input type="text" placeholder="Address"></input>
+          </div>
         :
         ''
         }
         
-        <button>{props.buttonTypeP}</button>
+        <button style={selectButtonTheme}>{props.buttonTypeP}</button>
       </form>
     </section>
   );

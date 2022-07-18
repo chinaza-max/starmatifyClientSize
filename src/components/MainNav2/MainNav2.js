@@ -19,12 +19,12 @@ export default function MainNav2() {
       })
 
     function select(val){
-
-    let elements=document.querySelectorAll('.SelectedLink')
-    elements.forEach((ele)=>{
-        ele.classList.remove("active");
-    })
-    elements[val].classList.add("active");
+      
+        let elements=document.querySelectorAll('.SelectedLink2')
+        elements.forEach((ele)=>{
+            ele.classList.remove("active2");
+        })
+        elements[val].classList.add("active2");
     }
 
     
@@ -32,21 +32,19 @@ export default function MainNav2() {
     setTimeout(()=>{
 
             if(isLoggedIn){
-              setItems([{x:0,data:"Home",data2:"SelectedLink  active",
-              data3:0,delay:100},{x:0,data:"Gallery",data2:"SelectedLink",
-              data3:1,delay:200},{x:0,data:"Dashboard",data2:"SelectedLink",
-              data3:2,delay:300},{x:0,data:"Contact",data2:"SelectedLink",
-              data3:3,delay:400}])
+              setItems([{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:100},
+              {x:0,data:"Gallery",data2:"SelectedLink2",data3:1,delay:200},
+              {x:0,data:"Dashboard",data2:"SelectedLink2",data3:2,delay:300},
+              {x:0,data:"Contact",data2:"SelectedLink2",data3:3,delay:400}])
             }
             else{
-              setItems([{x:0,data:"Homek",data2:"SelectedLink  active",
-              data3:0,delay:100},{x:0,data:"Service",data2:"SelectedLink",
-              data3:1,delay:200},{x:0,data:"Gallery",data2:"SelectedLink",
-              data3:2,delay:300},{x:0,data:"Contact",data2:"SelectedLink",
-              data3:3,delay:400}])
-            }
-           
-  
+            
+              setItems([{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:100},
+                        {x:0,data:"Service",data2:"SelectedLink2",data3:1,delay:200},
+                        {x:0,data:"Gallery",data2:"SelectedLink2",data3:2,delay:300},
+                        {x:0,data:"Contact",data2:"SelectedLink2",data3:3,delay:400}])
+          
+              }
   }
     ,1000)
   },[isLoggedIn])
@@ -57,8 +55,8 @@ export default function MainNav2() {
     {
       transition((style,item)=>
        item?
-       <animated.li style={style}>
-       <Link to={"#"} className={item.data2} onClick={()=>select(item.data3)}>
+       <animated.li style={style} className={item.data2}>
+       <Link to={"#"}  onClick={()=>select(item.data3)}>
             {item.data}
            <span className="borderSelect"></span>
        </Link>

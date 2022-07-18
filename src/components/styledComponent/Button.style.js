@@ -7,7 +7,7 @@ const Button=styled.div`
     background-color:${({buttonColorP})=>buttonColorP?buttonColorP:"transparent"} ;
     color:${({ColorP})=>ColorP?ColorP:"#FFFFFF"};
     text-align:center;
-    border-radius:10px;
+    border-radius:5px;
     >h5{
         line-height:29px;
         font-size:16px;

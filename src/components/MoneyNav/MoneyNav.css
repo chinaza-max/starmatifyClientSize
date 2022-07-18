@@ -76,6 +76,11 @@
   }
 }
 
+.MoneyNav > li:nth-child(2) ul li:nth-child(1) {
+  font-size: 13px;
+  line-height: 22px;
+}
+
 @media (max-width: 480px) {
   .MoneyNav > li:nth-child(2) ul li {
     line-height: 22px;
@@ -85,7 +90,7 @@
 @media (max-width: 480px) {
   .MoneyNav > li:nth-child(2) > ul > li:first-child {
     font-size: 10px;
-    line-height: 23px;
+    line-height: 27px;
   }
 }
 

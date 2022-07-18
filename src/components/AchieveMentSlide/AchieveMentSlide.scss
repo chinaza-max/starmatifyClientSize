@@ -1,0 +1,11 @@
+.carousel-container{
+    div{
+        z-index: -20;
+        border: 1px solid red;
+        img{
+            height: 70px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

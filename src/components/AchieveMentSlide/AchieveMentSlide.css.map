@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,mBADe,CACf,GAAG,CAAA;EACC,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,aAAa;CAMxB;;AATL,AAIQ,mBAJW,CACf,GAAG,CAGC,GAAG,CAAA;EACC,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,MAAM;CACjB",
+    "sources": [
+        "AchieveMentSlide.scss"
+    ],
+    "names": [],
+    "file": "AchieveMentSlide.css"
+}

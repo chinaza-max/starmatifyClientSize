@@ -5,13 +5,17 @@ $fontsizetablet:15px;
 .NavLinkmobile{
     list-style: none;
     padding:0;
-    display: none;
-    @media (max-width:480px) {
-        display: grid;
+    display: grid;
         grid-template-columns:1fr 1fr 1fr 1fr;
         grid-column-gap: 10px;
         justify-items: center;
         margin: 0 auto;
+       
+        max-width: 700px;
+    @media (max-width:768px) {
+        max-width: 500px;
+    }
+    @media (max-width:480px) {
         width: 98%;
     }
     >li{

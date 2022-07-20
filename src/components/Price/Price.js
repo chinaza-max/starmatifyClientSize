@@ -33,7 +33,7 @@ export default function Price() {
                         }}
                         animationType="diagonal"
                         interval={0.06}
-                        duration={0.8}
+                        duration={5}
                         tag="p"
                         className="animated-paragraph"
                         includeWhiteSpaces
@@ -52,7 +52,7 @@ export default function Price() {
                         }}
                         animationType="diagonal"
                         interval={0.06}
-                        duration={0.8}
+                        duration={5}
                         tag="p"
                         className="animated-paragraph"
                         includeWhiteSpaces

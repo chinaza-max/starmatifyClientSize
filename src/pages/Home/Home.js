@@ -10,6 +10,14 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import AnimatedBg from "@bulletlogic/react-animated-bg";
 import Price from "../../components/Price/Price"
 import Slide from "../../components/AchieveMentSlide/AchieveMentSlide"
+import Service  from "../../components/Cards/ServiceCards/ServiceCards";
+import Headers from "../../components/Headers/Headers";
+import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
+import OilBarrelOutlinedIcon from '@mui/icons-material/OilBarrelOutlined';
+import PestControlOutlinedIcon from '@mui/icons-material/PestControlOutlined';
+import ElectricMeterOutlinedIcon from '@mui/icons-material/ElectricMeterOutlined';
+import PlumbingOutlinedIcon from '@mui/icons-material/PlumbingOutlined';
+import GrassOutlinedIcon from '@mui/icons-material/GrassOutlined';
 
 import mobile from "../../images/mobile.png"
 import image from "../../images/image9.jpg"
@@ -41,6 +49,13 @@ export default function Home() {
     backgroundColor:darkTheme?'black':"rgba(40,89,69,0.6)",
     color:darkTheme?'black':"green",
   }
+
+  const serviceDescrption=[{type:"CLEANING",description:"Whether you need a deep cleaning or routine maintenance cleaning service for your home, office, factory etc, discover the difference trained workers, a simple and effective quality program, and professional management can make when you hire us. Our edge lies in our wealth of experience gathered over the years in managing high profile cleaning jobs and delivering the desired outcomes.",icon:CleaningServicesOutlinedIcon},
+                            {type:"FPSO, TANKS AND VESSEL DESLUDGING",description:"In 2020, we secured partnerships and accreditations including the DPR permit to enable us provide fast, efficient and safe desludging and cleaning services for FPSO using automated cleaning system with High Pressure Jetting and Vacuum Transfer System capable of water jetting and cleaning of the interior surfaces, and evacuating sludge from a depth of over 50meters in FPSO.",icon:OilBarrelOutlinedIcon},
+                            {type:"FUMIGATION/PEST CONTROL",description:"With the most modern innovations in pest control and the use of approved products, we provide the most effective pest control services to our clients. Our staff attend certified pest control trainings to remain informed. Over the years we have consistently provided pest control services to multi-nationals, world organizations, government and private establishments, estates and individuals.",icon:PestControlOutlinedIcon},
+                            {type:"ELECTRICAL & AIR CONDITIONING (AC)",description:"Whether for your home, office, factory, estate etc, we offer routine check-ups and repairs of the air conditioning and electrical systems in residential and commercial building through testing, monitoring, fixing, and replacing elements of the system. We also provide installations, wiring, general assessment and consultancy. We offer this as an instant, on call, routine and subscription based service.",icon:ElectricMeterOutlinedIcon},
+                            {type:"PLUMBING",description:"We offer installation, inspection, replacement and repair of plumbing fixtures. Do you need a scheduled maintenance, on call, or routine onsite inspection and repairs? We are your most preferred choice. We bear no misgivings about delivering your most desired outcomes.",icon:PlumbingOutlinedIcon},
+                            {type:"HORTICULTURE/GARDENING",description:"Landscaping and garden maintenance services just got redefined with our bespoke services. With a good understanding of your environment, aesthetics and your needs, we deliver planting, scheduled, on call, and routine landscaping and garden maintenance services  .",icon:GrassOutlinedIcon}]
 
   useEffect(()=>{
 
@@ -150,7 +165,7 @@ export default function Home() {
             Track your services via our web App
           </h3>
           <a href="/#">
-            services
+            Features
           </a>
 
           <div></div>
@@ -160,7 +175,13 @@ export default function Home() {
         </li>
       </ul>
     </section>
-
+    <section id="section4">
+      <Headers titleP="We Are a Leading Cleaning Company in Nigeria." pagraphP="We understand that the greatest ‘nightmare’ of facility owners are issues relating to facility management. We therefore lift off the burden of these ‘distractions’ so as to improve quality of life and the productivity of our clients who now concentrate on the core of their business and concerns." pagraphP2="We deliver your most desired facility management outcomes made possible through our experience over the years by paying attention to details, professionalism and constant training"/>
+      <div className="services"> 
+        <Service serviceDescrptionP={serviceDescrption}/>
+      </div>
+    
+    </section>
     </div>
   )
 }

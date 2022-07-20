@@ -80,8 +80,8 @@ export default function MainNav() {
                  <animated.span style={style}>
                   <Link to={"#"}>
                     <img src={img} alt=""/>
-                  </Link>
-               </animated.span>
+                    </Link>
+                  </animated.span>
                  :""
               )} 
         </li>

@@ -3,7 +3,8 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  z-index: 10000px;
+  z-index: 1;
+  position: relative;
 }
 
 .FormContainer form {
@@ -15,7 +16,6 @@
   margin-top: 30px;
   background-color: #2c2b2bc9;
   padding-bottom: 1px;
-  z-index: 10000px;
 }
 
 @media (max-width: 768px) {
@@ -55,7 +55,7 @@
   color: white;
   opacity: 0.7;
   border: none;
-  border-bottom: 1px solid #434343;
+  border-bottom: 1px solid #d6d5d5;
   outline: 0px;
   font-size: 13px;
   padding: 0;

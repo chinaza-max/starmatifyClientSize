@@ -1,0 +1,54 @@
+.ServiceCards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 480px) {
+  .ServiceCards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.ServiceCards > li {
+  width: 450px;
+  max-width: none;
+  min-width: none;
+}
+
+@media (max-width: 955px) {
+  .ServiceCards > li {
+    width: 365px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ServiceCards > li {
+    width: 342px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ServiceCards > li {
+    max-width: 400px;
+    min-width: 280px;
+  }
+}
+/*# sourceMappingURL=ServiceCards.css.map */

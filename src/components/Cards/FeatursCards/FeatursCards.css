@@ -1,1 +1,67 @@
-/* No CSS *//*# sourceMappingURL=FeatursCards.css.map */
+.FeatursCards {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.FeatursCards > li {
+  width: 270px;
+  height: 325px;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .FeatursCards > li {
+    width: 225px;
+    height: 290px;
+  }
+}
+
+.FeatursCards > li > div {
+  width: 97%;
+  height: 97%;
+  border: 1px solid green;
+  padding: 6px;
+  margin: 0 auto;
+}
+
+.FeatursCards > li > div p {
+  margin-top: 10px;
+}
+
+.FeatursCards > li > div h2 {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .FeatursCards > li > div h2 {
+    font-size: 16px;
+  }
+}
+
+.FeatursCards > li > div > div {
+  margin-top: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid green;
+}
+
+@media (max-width: 768px) {
+  .FeatursCards > li > div > div {
+    width: 70px;
+    height: 70px;
+  }
+}
+/*# sourceMappingURL=FeatursCards.css.map */

@@ -26,14 +26,14 @@ export default function Price() {
                     <AnimatedText
                         type="chars" // animate words or chars
                         animation={{
-                            x: '200px',
+                            x: '10px',
                             y: '-20px',
                             scale: 1.1,
                             ease: 'ease-in-out',
                         }}
                         animationType="diagonal"
                         interval={0.06}
-                        duration={5}
+                        duration={2}
                         tag="p"
                         className="animated-paragraph"
                         includeWhiteSpaces
@@ -45,14 +45,14 @@ export default function Price() {
                     <AnimatedText
                         type="chars" // animate words or chars
                         animation={{
-                            x: '200px',
+                            x: '10px',
                             y: '-20px',
                             scale: 1.1,
                             ease: 'ease-in-out',
                         }}
                         animationType="diagonal"
                         interval={0.06}
-                        duration={5}
+                        duration={2}
                         tag="p"
                         className="animated-paragraph"
                         includeWhiteSpaces

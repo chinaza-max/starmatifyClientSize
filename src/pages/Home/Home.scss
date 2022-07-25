@@ -74,7 +74,9 @@ $fontSizePM:12px;
                     #paragraph{
                         margin-top: 45px;
                         padding-left: 10px;
-                        color: white;
+                        p{
+                            color: white;
+                        }
                         @media (max-width:768px) {
                             margin-top: 20px;
                         }
@@ -185,6 +187,16 @@ $fontSizePM:12px;
         width: 100%;
         height: fit-content;
         font-family: $section3fontFamilyH;
+        position: relative;
+        .overLay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            top: 0px;
+            opacity: .5;
+            
+        }
         >ul{
             list-style: none;
             padding: 0;
@@ -197,12 +209,15 @@ $fontSizePM:12px;
             background-size: cover;
             height: 370px;
             margin-top: 40px;
+            z-index: 20px;
+     
             @media (max-width:615px) {
                 flex-direction: column;
                 height: 640px;
             }
             >li{
                 flex: 1;
+                position: relative;
                 &:nth-child(1){
                     margin-top: 100px;
                     @media (max-width:615px) {
@@ -289,7 +304,49 @@ $fontSizePM:12px;
             }
         }
     }
+    #section5{
+        background: #305349;
+        margin-top: 30px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        @media (max-width:480px) {
+            margin-top: 10px;
+            padding-top: 20px;
+        }
+        >h2{
+            color: gold;
+            margin-left: 30px;
+            @media (max-width:480px) {
+                font-size: 18px;
+            }
+        }   
+    }
+    #section6{
+        margin-top: 40px;
+
+        >h2{
+            text-align: center;
+            font-size: 30px;
+            margin-top: 20px;
+            @media (max-width:768px) {
+                font-size: 20px;
+            }
+        }
+        >p{
+            text-align: center;
+            font-size: 18px;
+            @media (max-width:768px) {
+                font-size: 15px;
+            }
+        }
+        >div{
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
     .mobileMenu{
+        
         .MenuIcon{
             color: white;
         }

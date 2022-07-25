@@ -32,16 +32,9 @@
   color: green;
 }
 
-@media (max-width: 768px) {
-  .ServiceCard > li:nth-child(2) h2 {
-    font-size: 20px;
-  }
-}
-
 .ServiceCard > li:nth-child(2) p {
   margin-top: 5px;
   color: #6E6d7a;
-  font-size: 16px;
   line-height: 18px;
 }
 

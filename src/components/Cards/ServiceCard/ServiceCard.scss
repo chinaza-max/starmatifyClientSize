@@ -22,16 +22,15 @@ $colorP:#6E6d7a;
             }
         }
         &:nth-child(2) {
-            h2{
-                @media (max-width:768px) {
-                   font-size: 20px;
-                }
-            }
+           
             p{
                 margin-top: 5px;
                 color: $colorP;
-                font-size: 16px;
+              //  font-size: 16px;
                 line-height: 18px;
+                @media (max-width:768px) {
+                    // flex-wrap: nowrap;
+                }
                 @media (max-width:480px) {
                     font-size: 14px;
                 }

@@ -12,11 +12,13 @@ import Money from "../MoneyNav/MoneyNav"
 //import {useSelector } from "react-redux"
 //import {DisplayJoinUsPage,DisplayLoginPage}  from "../../Redux/Action"
 
-export default function MainNav() {
+export default function MainNav(props) {
   const [items,setItems]=useState([]);
   const [items2,setItems2]=useState(false);
   const isLoggedIn=useSelector(state=> state.isLoggedIn)
   const darkTheme =useTheme()
+
+  /*
   const transition=useTransition(items,{
     from:{x:100,y:-200,opacity:0},
     enter:item=>(next)=>(
@@ -24,17 +26,18 @@ export default function MainNav() {
     ),
     leave:{x:100,y:800,opacity:0},
   })
-
+*/
   const transition2=useTransition(items2,{
     from:{x:100,y:-200,opacity:0},
     enter:{x:0,y:0,opacity:1},
     leave:{x:100,y:800,opacity:0},
   })
 
-  const NavBarThem={
+  const NavBarTheme={
     backgroundColor:darkTheme?'black':"#285945",
     color:darkTheme?'white':"white",
   }
+  /*
   function select(val){
 
     let elements=document.querySelectorAll('.SelectedLink')
@@ -42,7 +45,7 @@ export default function MainNav() {
         ele.classList.remove("active");
     })
     elements[val].classList.add("active");
-  }
+  }*/
 
   useEffect(()=>{
     setTimeout(()=>{
@@ -69,7 +72,7 @@ export default function MainNav() {
   
   return (
     <>
-    <nav className="MainNav" style={NavBarThem}>
+    <nav className="MainNav" style={NavBarTheme}>
       
       <ul id="upNav">
         <li id="logo">
@@ -83,26 +86,11 @@ export default function MainNav() {
                     </Link>
                   </animated.span>
                  :""
-              )} 
+                ) 
+              } 
         </li>
-        <li id="middle">
-            <ul className="NavLinks">
-              {
-                transition((style,item)=>
-                 item?
-                 <animated.li style={style}>
-                    <Link to={"#"} className={item.data2} onClick={()=>select(item.data3)}>
-                          {item.data}
-                        <span className="borderSelect"></span>
-                    </Link>
-                  </animated.li>
-                 :""
-              )}  
-            </ul>
-        </li>
-        <li>
 
-        
+        <li>        
           {isLoggedIn?
           <>
             <ul id="rightSide">
@@ -116,15 +104,15 @@ export default function MainNav() {
               <span id="first">
                 <Button>
                   <h5>
-                  login
+                    login
                   </h5>
                 </Button>
-             </span>
+              </span>
 
               <span id="second">
                 <Button buttonColorp="true">
                   <h5>
-                  SignUp
+                   SignUp
                   </h5>
                 </Button>
               </span>
@@ -132,7 +120,7 @@ export default function MainNav() {
           }
         </li>
       </ul>
-      <Nav2/>
+      <Nav2 NavlinksLoginP={props.NavlinksLoginP}  NavlinksNotLoginP={props.NavlinksNotLoginP}/>
     </nav>
     </>
   )

@@ -1,0 +1,38 @@
+.Tables2 {
+  width: 640px;
+  padding: 0px 5px 0px 5px;
+  background-color: #f1f0f0;
+  padding-top: 7px;
+}
+
+.Tables2 .head {
+  list-style: none;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  border-bottom: 1px solid #dedcdc;
+  padding-bottom: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.Tables2 .head li {
+  width: 70px;
+}
+
+.Tables2 > ul:nth-child(1) {
+  height: 30px;
+}
+
+.Tables2 > ul {
+  height: 42px;
+}
+
+.Tables2 > ul:nth-child(even) {
+  background-color: #d4e1d4;
+  padding: 3px 3px;
+}
+/*# sourceMappingURL=Tables2.css.map */

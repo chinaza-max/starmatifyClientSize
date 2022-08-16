@@ -1,0 +1,40 @@
+.Table {
+  list-style: none;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 20px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.Table li {
+  font-size: 12px;
+  min-width: 45px;
+  white-space: nowrap;
+  line-height: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (max-width: 1000px) {
+  .Table li {
+    font-size: 8px;
+  }
+}
+
+.Table li:nth-child(4) {
+  white-space: nowrap;
+}
+
+.Table li:nth-child(1) {
+  max-width: 90px;
+}
+
+.Table .button {
+  margin-top: 1px;
+}
+/*# sourceMappingURL=Table.css.map */

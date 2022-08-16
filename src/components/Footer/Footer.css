@@ -1,8 +1,8 @@
 .Footer {
   width: 95%;
   margin: 0 auto;
-  padding-top: 20px;
-  margin-top: 20px;
+  padding-top: 25px;
+  margin-top: 50px;
 }
 
 .Footer > ul {
@@ -13,6 +13,13 @@
       grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
   list-style: none;
+}
+
+@media (max-width: 600px) {
+  .Footer > ul {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -30,8 +37,8 @@
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
-  color: #c3bdbd;
-  font-size: 15px;
+  color: white;
+  font-size: 13px;
 }
 
 .Footer > ul > li .image {
@@ -45,18 +52,50 @@
   height: 100%;
 }
 
+.Footer > ul > li ul {
+  margin-top: 12px;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  width: 60px;
+  list-style: none;
+}
+
+.Footer > ul > li ul li a {
+  text-decoration: none;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.Footer > ul > li ul li a img {
+  width: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
 .Footer > ul > li > div > ul {
   padding: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 3fr;
       grid-template-columns: 1fr 3fr;
-  grid-column-gap: 0px;
+  grid-column-gap: 10px;
   list-style: none;
 }
 
 .Footer > ul > li:nth-child(1) p {
   color: white;
+  min-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .Footer > ul > li:nth-child(1) p {
+    min-width: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -86,12 +125,22 @@
   }
 }
 
+.Footer > ul > li:nth-child(2) div ul li .icon {
+  font-size: 20px;
+}
+
 .Footer > ul > li:nth-child(2) div ul li:nth-child(1) {
   width: 20px;
 }
 
 .Footer > ul > li:nth-child(2) div ul li:nth-child(2) {
   width: 150px;
+}
+
+.Footer > ul > li:nth-child(2) div ul li:nth-child(2) p {
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 @media (max-width: 480px) {
@@ -131,5 +180,6 @@
 
 .Footer > div > span {
   color: #a7a65d;
+  font-size: 14px;
 }
 /*# sourceMappingURL=Footer.css.map */

@@ -8,7 +8,8 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background-color: #181818;
+    background-color: #285945;
+    z-index: 1;
   }
   .HomeBottomNavContainer .HomeBottomNav {
     display: -webkit-box;
@@ -25,13 +26,16 @@
   .HomeBottomNavContainer .HomeBottomNav > li li {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
-    font-size: 12px;
+    font-size: 10px;
   }
   .HomeBottomNavContainer .HomeBottomNav > li .HomeBottomNavAncho {
     text-decoration: none;
   }
+  .HomeBottomNavContainer .HomeBottomNav > li .HomeBottomNavAncho .MuiBadge-badge {
+    background-color: red;
+  }
   .HomeBottomNavContainer .HomeBottomNav > li .active li {
-    color: #FFC299;
+    color: gold;
   }
   .HomeBottomNavContainer .HomeBottomNav > li ul li span {
     font-family: "Poppins", sans-serif;

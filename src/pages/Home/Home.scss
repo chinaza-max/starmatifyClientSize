@@ -8,6 +8,7 @@ $fontSizePM:12px;
 .Home{
     margin-top: 0px;
     padding-top: 0px;
+   
     @media (max-width:768px) {
         min-width:600px;
     }
@@ -35,11 +36,11 @@ $fontSizePM:12px;
             margin-top: 85px;
             padding-bottom: 15px;
             height: fit-content;
-            max-height: 570px;
+            max-height: 670px;
             @media (max-width:480px) {
                 margin-top: 65px;
-                height: 900px;
-                max-height: 900px;
+               // height: 900px;
+                max-height: 1100px;
             }
             >ul{
                 width: 80%;
@@ -291,6 +292,8 @@ $fontSizePM:12px;
         }
     }
     #section4{
+        width: 100%;
+        overflow-x: hidden;
         margin-top: 30px;
         .services{
             width: 95%;
@@ -343,6 +346,31 @@ $fontSizePM:12px;
             width: 95%;
             margin: 0 auto;
             margin-top: 20px;
+        }
+    }
+    #section7{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        &::before{
+            content: "starmatify your home";
+            width: 250px;
+            height: 53px;
+            position: absolute ;
+            top: -45px;
+            left: -45px;
+            background-color:rgb(33, 76, 59);;
+            transform: rotate(20deg);
+            text-align: center;
+            line-height: 45px;
+            color: gold;
+            //transform: translate(0,20px);
+            @media (max-width:480px) {
+                height: 40px;
+                top: -35px;
+                left: -40px;
+                line-height: 40px;
+            }
         }
     }
     .mobileMenu{

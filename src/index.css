@@ -5,10 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
+
+
+
+  
 body {
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', sans-serif;
+}
+*{
+  scroll-behavior: smooth;
 }
 p{
   color:#6E6d7a;

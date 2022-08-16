@@ -239,11 +239,19 @@ $buttonColor:#285945;
                 color: white;
             }
             >input[type=text]{
-                width: 100%;
+                width: 96%;
                 margin-top: 3px;
+                border-radius: 12px;
+                padding: 3px;
+                background-color: transparent;
+                color: white;
                 &:focus{
                     outline: none;
-                }
+                    border: 1px solid green;
+                    background-color: #E8F0FE;
+                    color: black;
+                    
+                } 
             }
         }
         button{

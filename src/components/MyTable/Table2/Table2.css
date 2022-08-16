@@ -1,0 +1,32 @@
+.Table2 {
+  list-style: none;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.Table2 li {
+  width: 70px;
+  font-size: 12px;
+  white-space: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 40px;
+}
+
+@media (max-width: 1000px) {
+  .Table2 li {
+    font-size: 8px;
+  }
+}
+
+.Table2 .changeColor {
+  color: #ca4c4cfa;
+}
+/*# sourceMappingURL=Table2.css.map */

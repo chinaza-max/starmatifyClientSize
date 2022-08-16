@@ -49,14 +49,13 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  max-height: 570px;
+  max-height: 670px;
 }
 
 @media (max-width: 480px) {
   .Home .section-wrap #section1 {
     margin-top: 65px;
-    height: 900px;
-    max-height: 900px;
+    max-height: 1100px;
   }
 }
 
@@ -408,6 +407,8 @@
 }
 
 .Home #section4 {
+  width: 100%;
+  overflow-x: hidden;
   margin-top: 30px;
 }
 
@@ -482,6 +483,38 @@
   width: 95%;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+.Home #section7 {
+  position: relative;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.Home #section7::before {
+  content: "starmatify your home";
+  width: 250px;
+  height: 53px;
+  position: absolute;
+  top: -45px;
+  left: -45px;
+  background-color: #214c3b;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  text-align: center;
+  line-height: 45px;
+  color: gold;
+}
+
+@media (max-width: 480px) {
+  .Home #section7::before {
+    height: 40px;
+    top: -35px;
+    left: -40px;
+    line-height: 40px;
+  }
 }
 
 .Home .mobileMenu .MenuIcon {

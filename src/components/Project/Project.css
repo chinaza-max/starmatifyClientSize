@@ -1,0 +1,44 @@
+.Project {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 40vh;
+  width: 780px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+.Project .empty {
+  margin-top: 50px;
+}
+
+.Project .cardHead {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 860px) {
+  .Project {
+    width: 680px;
+  }
+}
+
+@media (max-width: 757px) {
+  .Project {
+    width: 580px;
+  }
+}
+
+@media (max-width: 582px) {
+  .Project {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Project {
+    width: 97%;
+  }
+}
+/*# sourceMappingURL=Project.css.map */

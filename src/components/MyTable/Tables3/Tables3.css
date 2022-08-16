@@ -1,0 +1,30 @@
+.Tables3 {
+  width: 665px;
+  padding: 0px 5px 0px 5px;
+  background-color: #f1f0f0;
+  padding-top: 7px;
+}
+
+.Tables3 .head {
+  list-style: none;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 15px;
+  border-bottom: 1px solid #dedcdc;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+.Tables3 .head li {
+  width: 70px;
+}
+
+.Tables3 > ul:nth-child(even) {
+  height: 42px;
+  background-color: #d4e1d4;
+  padding: 3px 3px;
+}
+/*# sourceMappingURL=Tables3.css.map */

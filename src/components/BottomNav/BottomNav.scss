@@ -1,8 +1,8 @@
 $text:#FFFFFF;
-$hovercolor:#FFC299;
+$hovercolor:gold;
 $fontFamily:'Poppins', sans-serif;
-$bottomNavBackgroundcolor:#181818;
-$sizeNavText:12px;
+$bottomNavBackgroundcolor:rgb(40, 89, 69);
+$sizeNavText:10px;
 
 
 .HomeBottomNavContainer{
@@ -15,6 +15,7 @@ $sizeNavText:12px;
         bottom: 0px;
         width: 100%;
         background-color:$bottomNavBackgroundcolor;
+        z-index: 1;
         .HomeBottomNav{
             display: flex;
             width: 93%;
@@ -29,7 +30,10 @@ $sizeNavText:12px;
                     font-size: $sizeNavText;
                 }
                 .HomeBottomNavAncho{
-                    text-decoration: none;                                                                                                  
+                    text-decoration: none;  
+                    .MuiBadge-badge{
+                        background-color: red;
+                    }                                                                                                
                 }
                 .active li{
                     color: $hovercolor;

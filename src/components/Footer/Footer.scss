@@ -1,16 +1,19 @@
 .Footer{
     width: 95%;
     margin: 0 auto;
-    padding-top: 20px;
-    margin-top: 20px;
+    padding-top: 25px;
+    margin-top: 50px;
     >ul{
         padding: 0;
         display: grid;
         grid-template-columns:1fr 1fr 1fr;
         grid-column-gap: 30px;
         list-style: none;
+        @media (max-width:600px) {
+            grid-template-columns:1fr 1fr;
+        }
         @media (max-width:480px) {
-            grid-template-columns:1fr ;
+            grid-template-columns:1fr;
         }
         >li{
             h2{
@@ -21,18 +24,40 @@
                     text-decoration: none;
                     display: inline-block;
                     white-space: nowrap;
-                    color: rgb(195, 189, 189);
-                    font-size: 15px;
+                    color: rgb(255, 255, 255);
+                    font-size: 13px;
                 }
             }
             .image{
                 width: 100px;
                 height: 70px;
+                margin-bottom: 20px;
                 img{
                     width: 100%;
                     height: 100%;
                 }
-                margin-bottom: 20px;
+            }
+            ul{
+                margin-top: 12px;
+                padding: 0px;
+                display: grid;
+                grid-template-columns:1fr 1fr 1fr;
+                grid-column-gap: 10px;
+                width: 60px;
+                list-style: none;
+                li{
+                    a{   
+                        text-decoration: none;
+                        display: block;
+                        width: 30px ;
+                        height: 30px;
+                        img{
+                            width: 100%;
+                            width: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+                }
             }
            
             >div{
@@ -40,16 +65,18 @@
                     padding: 0;
                     display: grid;
                     grid-template-columns:1fr 3fr;
-                    grid-column-gap: 0px;
+                    grid-column-gap: 10px;
                     list-style: none;
                 }
            }
-            
-           
         }
         >li:nth-child(1){
             p{
                 color: white;
+                min-width: 200px;
+                @media (max-width:480px) {
+                    min-width: none;
+                }
             }
        
         }
@@ -69,11 +96,19 @@
                     margin-bottom: 5px;
                 }
                 li{
+                   .icon{
+                     font-size:20px ;
+                   }
                     &:nth-child(1){
                         width: 20px;
                     }
                     &:nth-child(2){
                         width: 150px;
+                        p{
+                            color: white;
+                            font-size: 12px;
+                            margin-top: 5px;
+                        }
                     }
                 }
             }
@@ -106,6 +141,7 @@
         text-align: right;
         >span{
             color: #a7a65d;
+            font-size: 14px;
         }
     }
 }

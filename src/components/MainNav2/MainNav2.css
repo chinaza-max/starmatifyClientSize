@@ -1,25 +1,28 @@
 .NavLinkmobile {
   list-style: none;
   padding: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  justify-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
-  max-width: 630px;
+  max-width: 520px;
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
   .NavLinkmobile {
-    max-width: 500px;
+    max-width: 480px;
+    width: 95%;
   }
 }
 
 @media (max-width: 480px) {
   .NavLinkmobile {
-    width: 98%;
+    width: 95%;
+    min-width: 290px;
   }
 }
 
@@ -39,6 +42,7 @@
   position: relative;
   color: white;
   font-size: 17px;
+  white-space: nowrap;
 }
 
 @media (max-width: 780px) {

@@ -3,9 +3,15 @@ import {NavLink} from "react-router-dom";
 import FlexRow from "../styledComponent/Flexrow.styled"
 import FlexColumn  from "../styledComponent/Flexcolumn.styled"
 import HomeIcon from '@mui/icons-material/Home';
-import PersonIcon from '@mui/icons-material/Person';
-import PostAddIcon from '@mui/icons-material/PostAdd';
-import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
+
+
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import ReceiptIcon from '@mui/icons-material/Receipt';
+import SettingsIcon from '@mui/icons-material/Settings';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 
 export default function BottomNav() {
@@ -23,32 +29,51 @@ export default function BottomNav() {
             </NavLink>
           </li>
           <li>
-            <NavLink  to='/Sport'  className="HomeBottomNavAncho">
+            <NavLink  to='/Home/Dashboard'  className="HomeBottomNavAncho">
               <FlexColumn>
-                <li><PostAddIcon/></li>
-                <li><span>Betslip</span></li>
+                <li><DashboardIcon/></li>
+                <li><span>Dashboard</span></li>
               </FlexColumn>
             </NavLink>
           </li>
           <li>
-            <NavLink  to='/Blog'  className="HomeBottomNavAncho" >
+            <NavLink  to='/Home/Project'  className="HomeBottomNavAncho" >
               <FlexColumn>
-                <li><ReceiptLongIcon/></li>
-                <li><span>My Bet</span></li>
+                <li><AssignmentIcon/></li>
+                <li><span>Project</span></li>
               </FlexColumn>
             </NavLink>
           </li>
           <li>
-            <NavLink  to='/ProfileMobile'  className="HomeBottomNavAncho" >
+            <NavLink  to='/Home/Transaction'  className="HomeBottomNavAncho" >
               <FlexColumn>
-                <li><PersonIcon/></li>
-                <li><span>Profile</span></li>
+                <li><ReceiptIcon/></li>
+                <li><span>Transaction</span></li>
+              </FlexColumn>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink  to='/Home/Notification'  className="HomeBottomNavAncho" >
+              <FlexColumn>
+                <li>
+                <Badge badgeContent={4} color="primary">
+                  <NotificationsIcon  />
+                </Badge>
+                </li>
+                <li><span>Notification</span></li>
+              </FlexColumn>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink  to='/Home/Settings'  className="HomeBottomNavAncho" >
+              <FlexColumn>
+                <li><SettingsIcon/></li>
+                <li><span>Settings</span></li>
               </FlexColumn>
             </NavLink>
           </li>
         </FlexRow>
       </footer>
-
   )
 }
 

@@ -76,7 +76,7 @@ export default function MainNav(props) {
       
       <ul id="upNav">
         <li id="logo">
-          
+        
             {
                 transition2((style,item)=>
                  item?

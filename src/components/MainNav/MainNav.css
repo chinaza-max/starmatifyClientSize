@@ -1,5 +1,5 @@
 .MainNav {
-  height: 90px;
+  height: 93px;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -8,7 +8,7 @@
 
 @media (max-width: 480px) {
   .MainNav {
-    height: 85px;
+    height: 88px;
   }
 }
 

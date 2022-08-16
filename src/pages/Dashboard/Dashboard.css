@@ -1,1 +1,233 @@
-/* No CSS *//*# sourceMappingURL=Dashboard.css.map */
+.Dashboard {
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 1008px) {
+  .Dashboard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .Dashboard {
+    width: 97%;
+  }
+}
+
+.Dashboard > ul {
+  list-style: none;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 4px;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  grid-row-gap: 40px;
+      grid-template-areas: "one two" "three three";
+}
+
+.Dashboard > ul .transaction {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: three;
+}
+
+@media (max-width: 1008px) {
+  .Dashboard > ul {
+    list-style: none;
+    padding: 0px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 4px;
+        grid-template-areas: "one" "two" "three";
+  }
+  .Dashboard > ul .cards {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  .Dashboard > ul .pending {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: two;
+  }
+  .Dashboard > ul .transaction {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: three;
+  }
+}
+
+.Dashboard > ul .cards .cardsContent {
+  list-style: none;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 30px;
+}
+
+.Dashboard > ul .cards .cardsContent > li > div {
+  width: 285px;
+  height: 100px;
+  background-color: #e8e6e6;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #a89008ea;
+}
+
+.Dashboard > ul .cards .cardsContent > li > div > h3 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.Dashboard > ul .cards .cardsContent > li > div > h5 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Dashboard > ul .cards .cardsContent > li > div > div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media (max-width: 1008px) {
+  .Dashboard > ul .cards .cardsContent {
+    list-style: none;
+    padding: 0px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2px;
+    justify-items: center;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div {
+    width: 220px;
+    height: 95px;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div > h5 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 762px) {
+  .Dashboard > ul .cards .cardsContent {
+    list-style: none;
+    padding: 0px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 2px;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div {
+    width: 300px;
+    height: 100px;
+  }
+  .Dashboard > ul .cards .cardsContent > li > div > h5 {
+    font-size: 13px;
+  }
+}
+
+.Dashboard > ul .pending {
+  display: block;
+}
+
+.Dashboard > ul .pending .pendingContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.Dashboard > ul .pending .pendingContainer .tableHead {
+  margin-bottom: 10px;
+}
+
+.Dashboard > ul .pending .projectMobile {
+  display: none;
+}
+
+.Dashboard > ul .pending .projectMobile .cardHead {
+  color: green;
+  font-size: 25px;
+}
+
+@media (max-width: 762px) {
+  .Dashboard > ul .pending .projectMobile {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 762px) {
+  .Dashboard > ul .pending .project {
+    display: none;
+  }
+}
+
+.Dashboard > ul .pending .emptyProject {
+  margin: 50px auto;
+}
+
+.Dashboard > ul .transaction {
+  display: block;
+}
+
+.Dashboard > ul .transaction .containerTransaction {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.Dashboard > ul .transaction .containerTransaction .tableHead {
+  margin-bottom: 10px;
+}
+
+.Dashboard > ul .transaction .projectMobile {
+  display: none;
+}
+
+.Dashboard > ul .transaction .projectMobile .cardHead {
+  color: green;
+  font-size: 25px;
+}
+
+@media (max-width: 762px) {
+  .Dashboard > ul .transaction .projectMobile {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 762px) {
+  .Dashboard > ul .transaction .Transaction {
+    display: none;
+  }
+}
+
+.Dashboard > ul .transaction .emptyTransaction {
+  margin: 50px auto;
+}
+/*# sourceMappingURL=Dashboard.css.map */

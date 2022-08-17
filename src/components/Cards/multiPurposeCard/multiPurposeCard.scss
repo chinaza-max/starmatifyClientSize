@@ -23,6 +23,7 @@ $backgroundColor:rgba(29, 115, 8, 0.12);
         
     }
     .first{
+        position: relative;
         h3{
             font-size: 15px;
         }
@@ -31,6 +32,8 @@ $backgroundColor:rgba(29, 115, 8, 0.12);
         }
         .date{
             margin-top: 25px;
+            position: absolute;
+            bottom: 10px;
         }
         .service{
             color: black

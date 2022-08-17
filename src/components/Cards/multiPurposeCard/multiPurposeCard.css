@@ -21,6 +21,10 @@
   white-space: nowrap;
 }
 
+.multiPurposeCard .first {
+  position: relative;
+}
+
 .multiPurposeCard .first h3 {
   font-size: 15px;
 }
@@ -31,6 +35,8 @@
 
 .multiPurposeCard .first .date {
   margin-top: 25px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .multiPurposeCard .first .service {

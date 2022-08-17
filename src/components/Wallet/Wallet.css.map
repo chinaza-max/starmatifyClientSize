@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,KAAK,EAAE,WAAW;EAClB,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,IAAI;CAKnB;;AARD,AAII,OAJG,CAIH,OAAO,CAAA;EACH,MAAM,EAAC,eAAe;EACtB,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "Wallet.scss"
+    ],
+    "names": [],
+    "file": "Wallet.css"
+}

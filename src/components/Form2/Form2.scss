@@ -88,7 +88,7 @@
                                     border: none;
                                     &:hover{
                                         cursor: pointer;
-                                        color: blue;
+                                        color: green;
                                     }
                                 }
                             }
@@ -96,8 +96,12 @@
                         }
                     }
                 }
+                .first{
+                    margin-top: 25px;
+                }
                 .item{
                     margin-bottom: 12px;
+                    
                     .size{
                         font-size: 20px;
                         input{

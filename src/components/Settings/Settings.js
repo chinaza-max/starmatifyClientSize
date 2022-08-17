@@ -2,6 +2,7 @@ import React ,{useEffect,useState} from 'react';
 import "./Settings.css";
 import Tabs, {Tab} from 'react-best-tabs';
 import {Alert,AlertTitle} from '@mui/material';
+import Wallet from "../Wallet/Wallet"
 import 'react-best-tabs/dist/index.css';
 
 
@@ -28,7 +29,9 @@ export default function Settings() {
         className=""
         ulClassName=""
         activityClassName="bg-success"
-        onClick={(event, tab) => console.log(event, tab)}
+        onClick={(event, tab) =>{
+          // console.log(event, tab)
+          }}
       >
           <Tab title="Profile" className="mr-3">
               <div className="mt-3">
@@ -36,14 +39,9 @@ export default function Settings() {
               </div>
           </Tab>
           
-          <Tab title="Password" className="mr-3">
-                <div className="mt-3">
-                  <h1 className="cardHead">Password</h1>
-                </div>
-          </Tab>
           <Tab title="Fund wallet" className="mr-3">
               <div className="mt-3">
-                  <h1 className="cardHead">fund wallet</h1>
+                <Wallet/>
               </div>
           </Tab>
           

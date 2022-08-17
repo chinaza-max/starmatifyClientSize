@@ -1,0 +1,13 @@
+.wallet {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.wallet .button {
+  border: 1px solid green;
+  color: green;
+}
+/*# sourceMappingURL=Wallet.css.map */

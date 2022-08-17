@@ -1,5 +1,11 @@
 $color:gold;
-
+@mixin ul($display,$column,$gap){
+  list-style: none;
+  padding: 0px;
+  display: $display;
+  grid-template-columns:repeat($column,1fr);
+  grid-column-gap:$gap;
+}
 
 *:hover{
     -webkit-transition: all 1s ease;
@@ -37,6 +43,17 @@ $color:gold;
     @media (max-width:480px) {
       max-width: 380px;
       width: 98%;
+    }
+    .buttonContainer{
+      @include ul(grid,2,0px);
+      justify-items: center;
+      li{
+        display: block;
+        a{
+          white-space: nowrap;
+          width: fit-content;
+        }
+      }
     }
   }
   .snip1336 * {

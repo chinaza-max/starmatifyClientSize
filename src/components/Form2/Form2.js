@@ -47,7 +47,7 @@ export default function Form2(props) {
                                         </ul> 
                                     </div>
 
-                                    <div className='item item2'>
+                                    <div className='item item2 first'>
                                         <div className='label size'>firstName</div>
                                        
                                         <div className='size'>
@@ -90,7 +90,7 @@ export default function Form2(props) {
                                     {
                                         props.typeP==="password"?
                                         <>  
-                                             <div className='item item2'>
+                                            <div className='item item7 first '>
                                                 <div className='label size'>password</div>
                                             
                                                 <div className='size'>
@@ -98,14 +98,35 @@ export default function Form2(props) {
                                                 </div>
                                             </div>
 
-                                            <div className='item item6'>
-                                            <div className='button'>Update password</div>
-                                    
-                                    </div>
+                                            <div className='item item8'>
+                                                <div className='button'>Update password</div>
+                                            </div>
 
                                         </>
                                         :
                                         <>
+                                            {
+                                             props.typeP==="wallet"?
+                                                <>
+                                                    <div className='item item7 first'>
+                                                        <div className='label size'>Amount</div>
+                                                        <div className='size'>
+                                                            <input type="tel" name='amount' onChange={handleChange} value="1000"/>
+                                                        </div>
+                                                    </div>
+                                                    <div className='item item7'>
+                                                        <div className='label size'>Email</div>
+                                                        <div className='size'>
+                                                            <input type="text" name='firstName' onChange={handleChange} value="Enter email address"/>
+                                                        </div>
+                                                    </div>
+                                                    <div className='item item8'>
+                                                        <div className='button'>submit</div>
+                                                    </div>
+                                                </>
+                                                :
+                                                ''
+                                            }
                                         </>
                                     }
                                 </>

@@ -35,7 +35,7 @@ export default function Wallet() {
                     NGN   5000
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    Money from wallet cant be withdrawn to avoid money laundry 
+                    Money from wallet cant be withdrawn to avoid money laundering
                 </Typography>
                 <Button variant="outlined" className='button'  onClick={()=>ToggleOverlay(true)}>Fund</Button>
                 </CardContent>

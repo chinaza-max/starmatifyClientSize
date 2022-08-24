@@ -14,7 +14,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
 
-export default function BottomNav() {
+export default function BottomNav(props) {
 
   
   return (
@@ -30,15 +30,15 @@ export default function BottomNav() {
           </li>
           <li>
             <NavLink  to='/Home/Dashboard'  className="HomeBottomNavAncho">
-              <FlexColumn>
+              <FlexColumn onClick={()=>{props.funcP()}}>
                 <li><DashboardIcon/></li>
-                <li><span>Dashboard</span></li>
+                <li><span >Dashboard</span></li>
               </FlexColumn>
             </NavLink>
           </li>
           <li>
             <NavLink  to='/Home/Project'  className="HomeBottomNavAncho" >
-              <FlexColumn>
+              <FlexColumn onClick={()=>{props.funcP()}}>
                 <li><AssignmentIcon/></li>
                 <li><span>Project</span></li>
               </FlexColumn>
@@ -46,7 +46,7 @@ export default function BottomNav() {
           </li>
           <li>
             <NavLink  to='/Home/Transaction'  className="HomeBottomNavAncho" >
-              <FlexColumn>
+              <FlexColumn onClick={()=>{props.funcP()}}>
                 <li><ReceiptIcon/></li>
                 <li><span>Transaction</span></li>
               </FlexColumn>
@@ -54,7 +54,7 @@ export default function BottomNav() {
           </li>
           <li>
             <NavLink  to='/Home/Notification'  className="HomeBottomNavAncho" >
-              <FlexColumn>
+              <FlexColumn onClick={()=>{props.funcP()}}>
                 <li>
                 <Badge badgeContent={4} color="primary">
                   <NotificationsIcon  />
@@ -66,7 +66,7 @@ export default function BottomNav() {
           </li>
           <li>
             <NavLink  to='/Home/Settings'  className="HomeBottomNavAncho" >
-              <FlexColumn>
+              <FlexColumn onClick={()=>{props.funcP()}}>
                 <li><SettingsIcon/></li>
                 <li><span>Settings</span></li>
               </FlexColumn>

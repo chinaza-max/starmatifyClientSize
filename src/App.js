@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate  } from "react-router-dom";
 import { ThemeProvider } from './themeContext';
 import Home from "./pages/Home/Home";
 import Gallery from "./pages/Gallery/Gallery";
@@ -9,6 +9,10 @@ import Project from "./components/Project/Project";
 import Transaction from "./components/Transaction/Transaction";
 import Notification from "./components/Notification/Notification";
 import Settings from "./components/Settings/Settings";
+import Instant from "./pages/Instant/Instant";
+import Subscription from "./pages/Subscription/Subscription";
+import Container2 from "./layout/Container2/Container2";
+import Container3 from "./layout/Container3/Container3";
 
 
 
@@ -29,15 +33,26 @@ function App() {
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home/>}/>
-              <Route path="/Home" element={<Container1/>}>
-                <Route path="/Home/Dashboard" element={<Dashboard/>}/>
-                <Route path="/Home/Project" element={<Project/>} />
-                <Route path="/Home/Transaction" element={<Transaction/>} />
-                <Route path="/Home/Notification" element={<Notification/>} />
-                <Route path="/Home/Settings" element={<Settings/>} />
-              </Route>
-            <Route path="/Affiliate" element={<Affiliate/>} />
-            <Route path="/Dashboard/Gallery" element={<Gallery/>} />
+
+            <Route path="/Home" element={<Navigate  to="/" />}/>
+
+            <Route path="/Home" element={<Container1/>}>
+              <Route path="/Home/Dashboard" element={<Dashboard/>}/>
+              <Route path="/Home/Project" element={<Project/>} />
+              <Route path="/Home/Transaction" element={<Transaction/>} />
+              <Route path="/Home/Notification" element={<Notification/>} />
+              <Route path="/Home/Settings" element={<Settings/>} />
+            </Route>
+
+            <Route path="/Home" element={<Container2/>}>
+              <Route path="/Home/Instant" element={<Instant/>} />
+              <Route path="/Home/Subscription" element={<Subscription/>} /> 
+            </Route>
+            <Route path="/Home" element={<Container3/>}>
+              <Route path="/Home/Affiliate" element={<Affiliate/>}/>
+              <Route path="/Home/Gallery" element={<Gallery/>} />  
+            </Route>
+           
         </Routes>
       </BrowserRouter>
    </ThemeProvider>

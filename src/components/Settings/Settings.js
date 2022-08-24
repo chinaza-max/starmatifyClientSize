@@ -12,7 +12,7 @@ import Card from "../../components/Cards/Profile/Profile"
 export default function Settings() {
   const [accountInfo,SetAccountInfo]=useState('')
   
-
+ 
 
 
   useEffect(()=>{
@@ -33,13 +33,13 @@ export default function Settings() {
           // console.log(event, tab)
           }}
       >
-          <Tab title="Profile" className="mr-3">
+          <Tab title="Profile" className="mr-3" >
               <div className="mt-3">
                   <Card dataP={accountInfo}/>
               </div>
           </Tab>
           
-          <Tab title="Fund wallet" className="mr-3">
+          <Tab title="Wallet" className="mr-3">
               <div className="mt-3">
                 <Wallet/>
               </div>

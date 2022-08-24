@@ -81,7 +81,7 @@ export default function MainNav(props) {
                 transition2((style,item)=>
                  item?
                  <animated.span style={style}>
-                  <Link to={"#"}>
+                  <Link to={"/home"}>
                     <img src={img} alt=""/>
                     </Link>
                   </animated.span>
@@ -125,10 +125,3 @@ export default function MainNav(props) {
     </>
   )
 }
-
-/*
-  {
-          transition((style,item)=>
-            item?<animated.div className="test" style={style}>{item.data}</animated.div>:""
-          )}  
- */

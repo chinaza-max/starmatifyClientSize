@@ -71,11 +71,11 @@
   color: gold;
 }
 
-.NavLinkmobile .active2 > a {
+.NavLinkmobile > li .active2 {
   color: gold;
 }
 
-.NavLinkmobile .active2 > a > span {
+.NavLinkmobile > li .active2 > span {
   width: 100%;
 }
 /*# sourceMappingURL=MainNav2.css.map */

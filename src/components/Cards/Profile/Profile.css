@@ -1,9 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
-*:hover {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
 .Profile {
   height: -webkit-fit-content;
   height: -moz-fit-content;

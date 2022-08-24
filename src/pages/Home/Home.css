@@ -111,17 +111,18 @@
 
 .Home .section-wrap #section1 > ul > li #paragraph p {
   color: white;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
-  .Home .section-wrap #section1 > ul > li #paragraph {
-    margin-top: 20px;
+  .Home .section-wrap #section1 > ul > li #paragraph p {
+    font-size: 12px;
   }
 }
 
 @media (max-width: 768px) {
   .Home .section-wrap #section1 > ul > li #paragraph {
-    font-size: 12px;
+    margin-top: 20px;
   }
 }
 

@@ -85,14 +85,14 @@ export default function Home() {
 
 
   const NavlinksLogin=[{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:100,data4:"#homeContainer",data5:"inpage"},
-                        {x:0,data:"Gallery",data2:"SelectedLink2",data3:1,delay:200,data4:"/gallary",data5:""},
+                        {x:0,data:"Gallery",data2:"SelectedLink2",data3:1,delay:200,data4:"/Home/Gallery",data5:""},
                         {x:0,data:"Dashboard",data2:"SelectedLink2",data3:2,delay:300,data4:"/Home/Dashboard",data5:""},
                         {x:0,data:"Contact",data2:"SelectedLink2",data3:3,delay:400,data4:"#section7",data5:"inpage"}]
 
                         
   const NavlinksNotLogin=[{x:0,data:"Home",data2:"SelectedLink2  active2",data3:0,delay:100,data4:"#homeContainer",data5:"inpage"},
                         {x:0,data:"Service",data2:"SelectedLink2",data3:1,delay:200,data4:"#section4",data5:"inpage"},
-                        {x:0,data:"Gallery",data2:"SelectedLink2",data3:2,delay:300,data4:"/gallary",data5:""},
+                        {x:0,data:"Gallery",data2:"SelectedLink2",data3:2,delay:300,data4:"/Home/Gallery",data5:""},
                         {x:0,data:"Contact",data2:"SelectedLink2",data3:3,delay:400,data4:"#section7",data5:"inpage"}]
 
   
@@ -184,7 +184,7 @@ export default function Home() {
 
               </li>
               <li>
-                  <Form typeP="instant" titleP="instant service request" buttonTypeP="Request a qoute"/>
+                  <Form typeP="instant"  ExHeightP2={"910px"}  ExHeightP={"620px"} heightP={"310px"} titleP="instant service request" buttonTypeP="Request a qoute"/>
               </li>
             </ul>
           </section>

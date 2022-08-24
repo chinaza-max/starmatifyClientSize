@@ -32,14 +32,18 @@ export default function Wallet() {
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    NGN   5000
+                  Balance:  NGN   5000
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     Money from wallet cant be withdrawn to avoid money laundering
                 </Typography>
-                <Button variant="outlined" className='button'  onClick={()=>ToggleOverlay(true)}>Fund</Button>
+               
                 </CardContent>
+                
             </CardActionArea>
+            <div className='buttonContainer'>
+            <Button variant="outlined" className='button'  onClick={()=>ToggleOverlay(true)}>Fund</Button>
+            </div>
             </Card>
             <Form dataP={disiplayForm}  funcP={ToggleOverlay} typeP="wallet"/>
     </div>

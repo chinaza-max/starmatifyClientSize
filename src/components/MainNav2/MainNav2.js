@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link,NavLink} from "react-router-dom";
 import {useTransition,animated}  from "react-spring"
 import {useEffect,useState} from "react";
 import {useSelector } from "react-redux";
@@ -23,7 +23,7 @@ export default function MainNav2(props) {
       
         let elements=document.querySelectorAll('.SelectedLink2')
 
-        console.log(elements)
+      
         elements.forEach((ele)=>{
             ele.classList.remove("active2");
         })
@@ -52,18 +52,18 @@ export default function MainNav2(props) {
     {
       transition((style,item)=>
        item?
-        <animated.li style={style} className={item.data2}>
+        <animated.li style={style} >
         
             {item.data5==="inpage"?
-                <a href={item.data4}  onClick={()=>select(item.data3)}>
+                <a href={item.data4} className={item.data2}  onClick={()=>select(item.data3)}>
                     {item.data}
                   <span className="borderSelect"></span>
                 </a>
             :
-            <Link to={item.data4}  onClick={()=>select(item.data3)}>
+            <NavLink to={item.data4}  className={({ isActive }) => (isActive ? 'active2' : '')} >
               {item.data}
               <span className="borderSelect"></span>
-            </Link>  
+            </NavLink>  
             }
           
         </animated.li>

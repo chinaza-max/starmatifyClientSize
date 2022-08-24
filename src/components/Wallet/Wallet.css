@@ -6,8 +6,23 @@
   margin-top: 20px;
 }
 
-.wallet .button {
+.wallet .buttonContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 10px auto;
+}
+
+.wallet .buttonContainer .button {
   border: 1px solid green;
+  color: green;
+}
+
+.wallet .buttonContainer .button:hover {
+  color: green;
+}
+
+.wallet .buttonContainer .button:active {
   color: green;
 }
 /*# sourceMappingURL=Wallet.css.map */

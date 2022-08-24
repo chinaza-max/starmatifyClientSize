@@ -26,14 +26,22 @@ export default function Container1() {
                         {x:0,data:"Notification",data2:"",data3:3,delay:400,data4:"/Home/Notification",data5:"",data6:"6"},
                         {x:0,data:"Settings",data2:"",data3:3,delay:400,data4:"/Home/Settings",data5:"",data6:""}]
 
-  const NavlinksLogin=[{x:0,data:"Instant Request",data2:"SelectedLink2",data3:0,delay:100,data4:"/Instant",data5:""},
-                        {x:0,data:"Subscribe Now",data2:"SelectedLink2",data3:1,delay:200,data4:"/Subscribe",data5:""},
-                        {x:0,data:"Affiliate",data2:"SelectedLink2",data3:2,delay:300,data4:"/Affiliate",data5:""}]
+  const NavlinksLogin=[{x:0,data:"Instant Request",data2:"SelectedLink2",data3:0,delay:100,data4:"/Home/Instant",data5:""},
+                        {x:0,data:"Subscribe Now",data2:"SelectedLink2",data3:1,delay:200,data4:"/Home/Subscription",data5:""},
+                        {x:0,data:"Affiliate",data2:"SelectedLink2",data3:2,delay:300,data4:"/Home/Affiliate",data5:""}]
   
-  const NavlinksNotLogin=[{x:0,data:"Instant Request",data2:"SelectedLink2",data3:0,delay:100,data4:"/Instant",data5:""},
-                        {x:0,data:"Subscribe Now",data2:"SelectedLink2",data3:1,delay:200,data4:"/Subscribe",data5:""},
-                        {x:0,data:"Affiliate",data2:"SelectedLink2",data3:2,delay:300,data4:"/Affiliate",data5:""}]
+  const NavlinksNotLogin=[{x:0,data:"Instant Request",data2:"SelectedLink2",data3:0,delay:100,data4:"/Home/Instant",data5:""},
+                        {x:0,data:"Subscribe Now",data2:"SelectedLink2",data3:1,delay:200,data4:"/Home/Subscription",data5:""},
+                        {x:0,data:"Affiliate",data2:"SelectedLink2",data3:2,delay:300,data4:"/Home/Affiliate",data5:""}]
   
+
+
+
+    function moveUp(){
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        }
+
+
   
     return (
         <div className='Container1'>
@@ -51,16 +59,13 @@ export default function Container1() {
             </div>
             <div id='Container1Section3'>
                 
-                <BottomNav/>
+                <BottomNav funcP={moveUp}/>
             </div>
             <div id='Container1Section4'  style={FooterTheme}>
-                <Footer/>
+                <Footer />
             </div>
         
         </div>
     )
 }
 
-/** <div id='Container1Section2'>
-        <Outlet/>
-      </div> */

@@ -53,15 +53,15 @@ $fontsizetablet:15px;
             color: $hoverColor;
         }
       }
-    }
-    .active2{
+      .active2{    
         
-        >a{
             color: $hoverColor;
             >span{
                 width: 100%;
             }
-        }
+    
     }
+    }
+   
 
 }

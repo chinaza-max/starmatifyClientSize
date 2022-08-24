@@ -29,7 +29,7 @@ export default   function Form(props) {
   const serviceId = useRef(0);
   const [myService, setMyservice] = useState([]);
   const setUpadtemyService=useRef([])
-  const [styles1, api1] = useSpring(() => ({ height: "310px" }));
+  const [styles1, api1] = useSpring(() => ({ height: props.heightP}));
   const isLoggedIn=useSelector(state=> state.isLoggedIn)
   const darkTheme =useTheme()
   const[title,setTitle]=useState(props.title);
@@ -72,19 +72,18 @@ export default   function Form(props) {
       else{
         IdAvailable(0)
       }
-      console.log(selector)
       setMyservice(setUpadtemyService.current.filter(function (e, i) {
         return e[0].props.id !== selector;
       }))
 
       if(count.current===1){
-        api1.start({ height:"310px" })
+        api1.start({ height:props.heightP })
       }
       if(count.current===2){
-        api1.start({ height:"310px" })
+        api1.start({ height:props.heightP})
       }
       else if(count.current===3){
-        api1.start({ height:"620px" })
+        api1.start({ height:props.ExHeightP})
       }
       setAdditionalServiceCount(count.current-1)
     }
@@ -93,10 +92,10 @@ export default   function Form(props) {
     const addService=()=>{
       let arr=[]
       if(additionalServiceCount===1){
-        api1.start({ height:"620px" })
+        api1.start({ height:props.ExHeightP })
       }
       else if(additionalServiceCount===2){
-        api1.start({ height:"910px" })
+        api1.start({ height:props.ExHeightP2 })
       }
 
       const serviceKey=serviceId.current;

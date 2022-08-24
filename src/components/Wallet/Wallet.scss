@@ -2,8 +2,20 @@
     width: fit-content;
     margin: 0 auto;
     margin-top: 20px;
-    .button{
-        border:1px solid green;
-        color: green;
+    .buttonContainer{
+        width:fit-content;
+        margin: 0 auto 10px auto;
+
+        .button{
+            border:1px solid green;
+            color: green;
+            &:hover{
+                color: green;
+            }
+            &:active{
+                color: green;
+            }
+        }
     }
+   
 }

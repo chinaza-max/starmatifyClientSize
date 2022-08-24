@@ -77,13 +77,15 @@ $fontSizePM:12px;
                         padding-left: 10px;
                         p{
                             color: white;
+                            font-size: 20px;
+                            @media (max-width:768px) {
+                                font-size: $fontSizePM;
+                            }
                         }
                         @media (max-width:768px) {
                             margin-top: 20px;
                         }
-                        @media (max-width:768px) {
-                            font-size: $fontSizePM;
-                        }
+                      
                     }
                     #button{
                         width: 230px;

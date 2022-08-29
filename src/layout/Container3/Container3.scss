@@ -5,7 +5,7 @@ $backgroundColor:#214c3b;
     .Container3Section2{
         min-height: 50vh ;
     }
-  /*  .Container3Section4{
+    .Container3Section4{
         margin-bottom: 0px;
         &::before{
             content: "starmatify your home";
@@ -29,5 +29,5 @@ $backgroundColor:#214c3b;
         @media (max-width:480px) {
             margin-bottom: 30px;
         }
-    }*/
+    }
 }

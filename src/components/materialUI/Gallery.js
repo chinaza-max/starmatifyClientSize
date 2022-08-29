@@ -5,7 +5,11 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
-import ImageViewer from 'react-simple-image-viewer';
+import { PhotoSlider } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
+
+
+
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -31,8 +35,8 @@ export default function QuiltedImageList(props) {
   };
 
   return (
+    <>
     <ImageList
-     
       variant="quilted"
       cols={4}
       rowHeight={121}
@@ -61,15 +65,16 @@ export default function QuiltedImageList(props) {
       ))}
 
 
-       {isViewerOpen && (
-        <ImageViewer
-          src={ props.itemDataP2 }
-          currentIndex={ currentImage }
-          disableScroll={ false }
-          closeOnClickOutside={ true }
-          onClose={ closeImageViewer }
-        />
-      )}
-    </ImageList>
+   
+      </ImageList>
+      <PhotoSlider
+      images={props.itemDataP2.map((item) => ({ src: item, key: item }))}
+      visible={isViewerOpen}
+      onClose={() => setIsViewerOpen(false)}
+      index={currentImage}
+      onIndexChange={setCurrentImage}
+    />
+    
+    </>
   );
 }

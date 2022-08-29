@@ -3,6 +3,7 @@ import Button from "../../components/styledComponent/Button.style";
 import React,{useState,useEffect} from 'react'
 import {useTheme}  from "../../themeContext"
 import MyGallery from '../../components/materialUI/Gallery';
+import MyVideo from "../../components/materialUI/GalleryVideo"
 import img1 from "../../images/imageG1.jpg"
 import img2 from "../../images/imageG2.jpg"
 import img3 from "../../images/imageG3.jpg"
@@ -76,7 +77,10 @@ export default function Gallery() {
        {view==="image"?
           <div className='section2'>
             <MyGallery itemDataP={itemData}  itemDataP2={itemDataUrl} />
-          </div>:''
+          </div>:
+           <div className='section2'>
+           <MyVideo itemDataP={itemData}  itemDataP2={itemDataUrl} />
+         </div>
         }
         
     </div>
@@ -160,24 +164,21 @@ const itemData = [
   {
      img:img16,
     title: 'bb',
-    rows: 2,
-    cols: 2,
+   
   },
   {
      img:img17,
     title: 'ooo',
-    cols: 2,
   },
   {
      img:img18,
     title: 'Biiiike',
-    cols: 2,
+    
   },
   {
      img:img19,
     title: 'Bikoooe',
-    rows: 1,
-    cols: 2,
+    
   },
   {
      img:img20,
